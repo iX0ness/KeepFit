@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		322C5CCA2035DB3E00488612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C5CC92035DB3E00488612 /* AppDelegate.swift */; };
-		322C5CCC2035DB3E00488612 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C5CCB2035DB3E00488612 /* ViewController.swift */; };
 		322C5CCF2035DB3E00488612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322C5CCD2035DB3E00488612 /* Main.storyboard */; };
 		322C5CD12035DB3E00488612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322C5CD02035DB3E00488612 /* Assets.xcassets */; };
 		322C5CD42035DB3E00488612 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322C5CD22035DB3E00488612 /* LaunchScreen.storyboard */; };
+		322C5CE02035DBDA00488612 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C5CDF2035DBDA00488612 /* ExerciseViewController.swift */; };
+		322C5CE22035DFFC00488612 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C5CE12035DFFC00488612 /* ExerciseTableViewCell.swift */; };
+		322C5CE42035FCAB00488612 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C5CE32035FCAB00488612 /* Exercise.swift */; };
+		325B78F6203B51AC00982D43 /* ExerciseProbeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325B78F5203B51AC00982D43 /* ExerciseProbeViewController.swift */; };
+		32A9122E2176178800DC5CFD /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A9122D2176178800DC5CFD /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		322C5CC62035DB3E00488612 /* KeepFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		322C5CC92035DB3E00488612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		322C5CCB2035DB3E00488612 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		322C5CCE2035DB3E00488612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		322C5CD02035DB3E00488612 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		322C5CD32035DB3E00488612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		322C5CD52035DB3E00488612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		322C5CDF2035DBDA00488612 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		322C5CE12035DFFC00488612 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		322C5CE32035FCAB00488612 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		325B78F5203B51AC00982D43 /* ExerciseProbeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseProbeViewController.swift; sourceTree = "<group>"; };
+		32A9122D2176178800DC5CFD /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,42 @@
 		322C5CC82035DB3E00488612 /* KeepFit */ = {
 			isa = PBXGroup;
 			children = (
+				322C5CDE2035DBA900488612 /* Controller */,
+				322C5CDD2035DBA200488612 /* View */,
+				322C5CDC2035DB9B00488612 /* Model */,
 				322C5CC92035DB3E00488612 /* AppDelegate.swift */,
-				322C5CCB2035DB3E00488612 /* ViewController.swift */,
 				322C5CCD2035DB3E00488612 /* Main.storyboard */,
 				322C5CD02035DB3E00488612 /* Assets.xcassets */,
 				322C5CD22035DB3E00488612 /* LaunchScreen.storyboard */,
 				322C5CD52035DB3E00488612 /* Info.plist */,
 			);
 			path = KeepFit;
+			sourceTree = "<group>";
+		};
+		322C5CDC2035DB9B00488612 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				322C5CE32035FCAB00488612 /* Exercise.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		322C5CDD2035DBA200488612 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				322C5CE12035DFFC00488612 /* ExerciseTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		322C5CDE2035DBA900488612 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				322C5CDF2035DBDA00488612 /* ExerciseViewController.swift */,
+				325B78F5203B51AC00982D43 /* ExerciseProbeViewController.swift */,
+				32A9122D2176178800DC5CFD /* PhotoViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +172,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				322C5CCC2035DB3E00488612 /* ViewController.swift in Sources */,
+				325B78F6203B51AC00982D43 /* ExerciseProbeViewController.swift in Sources */,
+				322C5CE22035DFFC00488612 /* ExerciseTableViewCell.swift in Sources */,
+				322C5CE42035FCAB00488612 /* Exercise.swift in Sources */,
+				322C5CE02035DBDA00488612 /* ExerciseViewController.swift in Sources */,
 				322C5CCA2035DB3E00488612 /* AppDelegate.swift in Sources */,
+				32A9122E2176178800DC5CFD /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +321,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iX0ness.KeepFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -296,7 +336,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iX0ness.KeepFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
