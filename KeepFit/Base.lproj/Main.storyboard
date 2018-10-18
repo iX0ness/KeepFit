@@ -119,6 +119,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="O1E-7R-tXN" id="zZt-Am-dCf"/>
+                        <segue destination="usC-6w-0Ci" kind="show" identifier="makeProbe" id="cjs-N3-SgM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3h-X2-DUz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -132,13 +133,38 @@
                     <view key="view" contentMode="scaleToFill" id="yk8-DD-Lsx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ELa-FE-U5c">
+                                <rect key="frame" x="0.0" y="64" width="375" height="523"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kg-zN-WoE">
+                                <rect key="frame" x="137.5" y="607" width="100" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Hy1-rm-3kg"/>
+                                    <constraint firstAttribute="width" constant="100" id="Zl5-ri-UGc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Check"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8kg-zN-WoE" firstAttribute="centerX" secondItem="q1B-06-SMv" secondAttribute="centerX" id="1Ui-C3-ZG4"/>
+                            <constraint firstItem="ELa-FE-U5c" firstAttribute="leading" secondItem="q1B-06-SMv" secondAttribute="leading" id="M68-mu-Jxy"/>
+                            <constraint firstItem="q1B-06-SMv" firstAttribute="bottom" secondItem="ELa-FE-U5c" secondAttribute="bottom" constant="80" id="RfY-9H-PQj"/>
+                            <constraint firstItem="ELa-FE-U5c" firstAttribute="trailing" secondItem="q1B-06-SMv" secondAttribute="trailing" id="St9-EH-YdY"/>
+                            <constraint firstItem="ELa-FE-U5c" firstAttribute="top" secondItem="q1B-06-SMv" secondAttribute="top" id="ZBI-Ow-Psq"/>
+                            <constraint firstItem="8kg-zN-WoE" firstAttribute="bottom" secondItem="q1B-06-SMv" secondAttribute="bottom" id="rIb-jF-zIm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="q1B-06-SMv"/>
                     </view>
+                    <connections>
+                        <outlet property="probeImageView" destination="ELa-FE-U5c" id="6zO-NR-ovG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qm0-vl-Saq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2369" y="133"/>
+            <point key="canvasLocation" x="2368.8000000000002" y="132.68365817091455"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pab-m7-Flx">

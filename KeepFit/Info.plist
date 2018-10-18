@@ -36,6 +36,10 @@
 	</array>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow camera usage to continue</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow photo library usage to continue</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
