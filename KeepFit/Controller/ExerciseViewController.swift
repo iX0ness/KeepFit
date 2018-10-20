@@ -69,12 +69,12 @@ class ExerciseViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func setupUI() {
-        exerciseTableView.backgroundView = UIImageView(image: UIImage(named: Constants.backgoundImage))
-        exerciseTableView.contentMode = .scaleToFill
-        exerciseTableView.contentInset = UIEdgeInsetsMake(40, 0, 0, 0)
-        navigationController?.navigationBar.barStyle = .default
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage(named: Constants.shadowImage)
+//        exerciseTableView.backgroundView = UIImageView(image: UIImage(named: Constants.backgoundImage))
+//        exerciseTableView.contentMode = .scaleToFill
+//        exerciseTableView.contentInset = UIEdgeInsetsMake(40, 0, 0, 0)
+//        navigationController?.navigationBar.barStyle = .default
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage(named: Constants.shadowImage)
         
     }
 

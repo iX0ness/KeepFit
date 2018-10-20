@@ -134,27 +134,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ELa-FE-U5c">
-                                <rect key="frame" x="0.0" y="64" width="375" height="523"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ELa-FE-U5c">
+                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kg-zN-WoE">
-                                <rect key="frame" x="137.5" y="607" width="100" height="60"/>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="4dC-OQ-AQW">
+                                <rect key="frame" x="117.5" y="89" width="20" height="20"/>
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Hy1-rm-3kg"/>
-                                    <constraint firstAttribute="width" constant="100" id="Zl5-ri-UGc"/>
+                                    <constraint firstAttribute="height" constant="20" id="e4K-HF-0EA"/>
+                                    <constraint firstAttribute="width" constant="20" id="qOM-9B-EQA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Check"/>
-                            </button>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="e7A-eL-vuV" appends="YES" id="5kj-eK-ZrI"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="2oB-Aw-oe4">
+                                <rect key="frame" x="177.5" y="89" width="20" height="20"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="8rQ-b3-cih"/>
+                                    <constraint firstAttribute="width" constant="20" id="j9F-tU-XuD"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jS1-c4-ga0" appends="YES" id="L1y-mH-Naf"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="UA6-AZ-HSt">
+                                <rect key="frame" x="237.5" y="89" width="20" height="20"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="cGr-L6-1kf"/>
+                                    <constraint firstAttribute="height" constant="20" id="vdg-fd-ohG"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7dX-pM-8R8" appends="YES" id="xFK-C7-j9H"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8kg-zN-WoE" firstAttribute="centerX" secondItem="q1B-06-SMv" secondAttribute="centerX" id="1Ui-C3-ZG4"/>
+                            <constraint firstItem="2oB-Aw-oe4" firstAttribute="leading" secondItem="4dC-OQ-AQW" secondAttribute="trailing" constant="40" id="7g8-xi-C3w"/>
+                            <constraint firstItem="4dC-OQ-AQW" firstAttribute="top" secondItem="q1B-06-SMv" secondAttribute="top" constant="25" id="BTf-Mw-UTn"/>
+                            <constraint firstItem="UA6-AZ-HSt" firstAttribute="top" secondItem="q1B-06-SMv" secondAttribute="top" constant="25" id="FA0-gN-EJY"/>
+                            <constraint firstItem="2oB-Aw-oe4" firstAttribute="centerX" secondItem="ELa-FE-U5c" secondAttribute="centerX" id="HFk-1t-JBY"/>
                             <constraint firstItem="ELa-FE-U5c" firstAttribute="leading" secondItem="q1B-06-SMv" secondAttribute="leading" id="M68-mu-Jxy"/>
-                            <constraint firstItem="q1B-06-SMv" firstAttribute="bottom" secondItem="ELa-FE-U5c" secondAttribute="bottom" constant="80" id="RfY-9H-PQj"/>
+                            <constraint firstItem="q1B-06-SMv" firstAttribute="bottom" secondItem="ELa-FE-U5c" secondAttribute="bottom" constant="50" id="RfY-9H-PQj"/>
+                            <constraint firstItem="UA6-AZ-HSt" firstAttribute="leading" secondItem="2oB-Aw-oe4" secondAttribute="trailing" constant="40" id="SCR-l5-FS2"/>
                             <constraint firstItem="ELa-FE-U5c" firstAttribute="trailing" secondItem="q1B-06-SMv" secondAttribute="trailing" id="St9-EH-YdY"/>
+                            <constraint firstItem="2oB-Aw-oe4" firstAttribute="top" secondItem="q1B-06-SMv" secondAttribute="top" constant="25" id="W39-ZW-ckg"/>
                             <constraint firstItem="ELa-FE-U5c" firstAttribute="top" secondItem="q1B-06-SMv" secondAttribute="top" id="ZBI-Ow-Psq"/>
-                            <constraint firstItem="8kg-zN-WoE" firstAttribute="bottom" secondItem="q1B-06-SMv" secondAttribute="bottom" id="rIb-jF-zIm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q1B-06-SMv"/>
                     </view>
@@ -163,6 +191,21 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qm0-vl-Saq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="e7A-eL-vuV">
+                    <connections>
+                        <action selector="handlePanWithRecognizer:" destination="usC-6w-0Ci" id="NEz-oD-efK"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="jS1-c4-ga0">
+                    <connections>
+                        <action selector="handlePanWithRecognizer:" destination="usC-6w-0Ci" id="lev-ob-sBL"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="7dX-pM-8R8">
+                    <connections>
+                        <action selector="handlePanWithRecognizer:" destination="usC-6w-0Ci" id="GP7-ud-rTG"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2368.8000000000002" y="132.68365817091455"/>
         </scene>
@@ -185,4 +228,7 @@
             <point key="canvasLocation" x="-206" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ellipse" width="20" height="20"/>
+    </resources>
 </document>
