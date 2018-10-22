@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ellipse.png",
+      "filename" : "mainPoint.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ellipse@2x.png",
+      "filename" : "mainPoint@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ellipse@3x.png",
+      "filename" : "mainPoint@3x.png",
       "scale" : "3x"
     }
   ],

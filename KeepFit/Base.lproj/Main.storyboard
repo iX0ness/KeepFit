@@ -137,7 +137,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ELa-FE-U5c">
                                 <rect key="frame" x="0.0" y="64" width="375" height="553"/>
                             </imageView>
-                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="4dC-OQ-AQW">
+                            <imageView tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="elipse" translatesAutoresizingMaskIntoConstraints="NO" id="4dC-OQ-AQW">
                                 <rect key="frame" x="117.5" y="89" width="20" height="20"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -148,7 +148,7 @@
                                     <outletCollection property="gestureRecognizers" destination="e7A-eL-vuV" appends="YES" id="5kj-eK-ZrI"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="2oB-Aw-oe4">
+                            <imageView tag="2" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainPoint" translatesAutoresizingMaskIntoConstraints="NO" id="2oB-Aw-oe4">
                                 <rect key="frame" x="177.5" y="89" width="20" height="20"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -156,10 +156,10 @@
                                     <constraint firstAttribute="width" constant="20" id="j9F-tU-XuD"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="jS1-c4-ga0" appends="YES" id="L1y-mH-Naf"/>
+                                    <outletCollection property="gestureRecognizers" destination="fE5-l6-xBa" appends="YES" id="qyf-VY-DfV"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="UA6-AZ-HSt">
+                            <imageView tag="3" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="elipse" translatesAutoresizingMaskIntoConstraints="NO" id="UA6-AZ-HSt">
                                 <rect key="frame" x="237.5" y="89" width="20" height="20"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -167,7 +167,7 @@
                                     <constraint firstAttribute="height" constant="20" id="vdg-fd-ohG"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="7dX-pM-8R8" appends="YES" id="xFK-C7-j9H"/>
+                                    <outletCollection property="gestureRecognizers" destination="c94-xb-Lvv" appends="YES" id="u8Q-iS-FC3"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYF-CQ-qqd">
@@ -196,7 +196,10 @@
                         <viewLayoutGuide key="safeArea" id="q1B-06-SMv"/>
                     </view>
                     <connections>
+                        <outlet property="firstPoint" destination="4dC-OQ-AQW" id="cXV-5z-yyl"/>
                         <outlet property="probeImageView" destination="ELa-FE-U5c" id="6zO-NR-ovG"/>
+                        <outlet property="secondPoint" destination="2oB-Aw-oe4" id="0HO-pf-AXU"/>
+                        <outlet property="thirdPoint" destination="UA6-AZ-HSt" id="lbf-2c-pz2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qm0-vl-Saq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,14 +208,14 @@
                         <action selector="handlePan1WithRecognizer:" destination="usC-6w-0Ci" id="Juu-uV-gJm"/>
                     </connections>
                 </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="jS1-c4-ga0">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="fE5-l6-xBa">
                     <connections>
-                        <action selector="handlePan2WithRecognizer:" destination="usC-6w-0Ci" id="qe5-e4-RgS"/>
+                        <action selector="handlePan1WithRecognizer:" destination="usC-6w-0Ci" id="vDS-w8-gXA"/>
                     </connections>
                 </panGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="7dX-pM-8R8">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="c94-xb-Lvv">
                     <connections>
-                        <action selector="handlePan3WithRecognizer:" destination="usC-6w-0Ci" id="WdN-mb-Ppe"/>
+                        <action selector="handlePan1WithRecognizer:" destination="usC-6w-0Ci" id="Xxq-M9-Fpa"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
@@ -238,6 +241,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ellipse" width="20" height="20"/>
+        <image name="elipse" width="20" height="20"/>
+        <image name="mainPoint" width="20" height="20"/>
     </resources>
 </document>

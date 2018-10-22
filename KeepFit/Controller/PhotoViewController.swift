@@ -75,12 +75,4 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
             destinationVC?.probePhoto = excercisePhoto
         }
     }
-
-
-
-
-    
-    
-
-
 }

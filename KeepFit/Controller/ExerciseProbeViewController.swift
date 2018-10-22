@@ -17,6 +17,10 @@ class ExerciseProbeViewController: UIViewController {
     var probePhoto: UIImage?
     @IBOutlet weak var probeImageView: UIImageView!
     
+    @IBOutlet weak var firstPoint: UIImageView!
+    @IBOutlet weak var secondPoint: UIImageView!
+    @IBOutlet weak var thirdPoint: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         probeImageView.image = probePhoto
@@ -32,34 +36,18 @@ class ExerciseProbeViewController: UIViewController {
                                   y:view.center.y + translation.y)
         }
         recognizer.setTranslation(CGPoint.zero, in: self.view)
-        point1 = CGPoint(x: (recognizer.view?.center.x)!, y: (recognizer.view?.center.y)!)
-    }
 
+        switch recognizer.view?.tag {
+        case 1:
+            point1 = CGPoint(x: (recognizer.view?.center.x)!, y: (recognizer.view?.center.y)!)
+        case 2:
+            point2 = CGPoint(x: (recognizer.view?.center.x)!, y: (recognizer.view?.center.y)!)
+        case 3:
+            point3 = CGPoint(x: (recognizer.view?.center.x)!, y: (recognizer.view?.center.y)!)
+        default: break
 
-    //second point
-    @IBAction func handlePan2(recognizer:UIPanGestureRecognizer) {
-        let translation = recognizer.translation(in: self.view)
-        if let view = recognizer.view {
-            view.center = CGPoint(x:view.center.x + translation.x,
-                                  y:view.center.y + translation.y)
         }
-        recognizer.setTranslation(CGPoint.zero, in: self.view)
-        point2 = CGPoint(x: (recognizer.view?.center.x)!, y: (recognizer.view?.center.y)!)
-
     }
-
-    //third point
-    @IBAction func handlePan3(recognizer:UIPanGestureRecognizer) {
-        let translation = recognizer.translation(in: self.view)
-        if let view = recognizer.view {
-            view.center = CGPoint(x:view.center.x + translation.x,
-                                  y:view.center.y + translation.y)
-        }
-        recognizer.setTranslation(CGPoint.zero, in: self.view)
-        point3 = CGPoint(x: (recognizer.view?.center.x)!, y: (recognizer.view?.center.y)!)
-
-    }
-    
 
     @IBAction func checkExercise(_ sender: Any) {
         let vectorCreator = PointManipulator(p1: point1, p2: point2, p3: point3)
