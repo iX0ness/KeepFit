@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3229435A217DECBD000B2FC3 /* PointManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32294359217DECBD000B2FC3 /* PointManipulator.swift */; };
 		322C5CCA2035DB3E00488612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C5CC92035DB3E00488612 /* AppDelegate.swift */; };
 		322C5CCF2035DB3E00488612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322C5CCD2035DB3E00488612 /* Main.storyboard */; };
 		322C5CD12035DB3E00488612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322C5CD02035DB3E00488612 /* Assets.xcassets */; };
@@ -16,9 +17,11 @@
 		322C5CE42035FCAB00488612 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C5CE32035FCAB00488612 /* Exercise.swift */; };
 		325B78F6203B51AC00982D43 /* ExerciseProbeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325B78F5203B51AC00982D43 /* ExerciseProbeViewController.swift */; };
 		32A9122E2176178800DC5CFD /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A9122D2176178800DC5CFD /* PhotoViewController.swift */; };
+		32EB0E6C217B94D6001E71EE /* VectorManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EB0E6B217B94D6001E71EE /* VectorManipulator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32294359217DECBD000B2FC3 /* PointManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointManipulator.swift; sourceTree = "<group>"; };
 		322C5CC62035DB3E00488612 /* KeepFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		322C5CC92035DB3E00488612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		322C5CCE2035DB3E00488612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		322C5CE32035FCAB00488612 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		325B78F5203B51AC00982D43 /* ExerciseProbeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseProbeViewController.swift; sourceTree = "<group>"; };
 		32A9122D2176178800DC5CFD /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		32EB0E6B217B94D6001E71EE /* VectorManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorManipulator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				322C5CE32035FCAB00488612 /* Exercise.swift */,
+				32EB0E6B217B94D6001E71EE /* VectorManipulator.swift */,
+				32294359217DECBD000B2FC3 /* PointManipulator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,9 +179,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				325B78F6203B51AC00982D43 /* ExerciseProbeViewController.swift in Sources */,
+				3229435A217DECBD000B2FC3 /* PointManipulator.swift in Sources */,
 				322C5CE22035DFFC00488612 /* ExerciseTableViewCell.swift in Sources */,
 				322C5CE42035FCAB00488612 /* Exercise.swift in Sources */,
 				322C5CE02035DBDA00488612 /* ExerciseViewController.swift in Sources */,
+				32EB0E6C217B94D6001E71EE /* VectorManipulator.swift in Sources */,
 				322C5CCA2035DB3E00488612 /* AppDelegate.swift in Sources */,
 				32A9122E2176178800DC5CFD /* PhotoViewController.swift in Sources */,
 			);

@@ -75,7 +75,7 @@ class ExerciseViewController: UIViewController, UITableViewDelegate, UITableView
 //        navigationController?.navigationBar.barStyle = .default
 //        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
 //        self.navigationController?.navigationBar.shadowImage = UIImage(named: Constants.shadowImage)
-        
+
     }
 
 
