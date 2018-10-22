@@ -170,15 +170,24 @@
                                     <outletCollection property="gestureRecognizers" destination="7dX-pM-8R8" appends="YES" id="xFK-C7-j9H"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYF-CQ-qqd">
+                                <rect key="frame" x="164.5" y="625" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="checkExercise:" destination="usC-6w-0Ci" eventType="touchUpInside" id="xid-Om-6VU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2oB-Aw-oe4" firstAttribute="leading" secondItem="4dC-OQ-AQW" secondAttribute="trailing" constant="40" id="7g8-xi-C3w"/>
                             <constraint firstItem="4dC-OQ-AQW" firstAttribute="top" secondItem="q1B-06-SMv" secondAttribute="top" constant="25" id="BTf-Mw-UTn"/>
+                            <constraint firstItem="FYF-CQ-qqd" firstAttribute="centerX" secondItem="ELa-FE-U5c" secondAttribute="centerX" id="DGJ-oS-qvP"/>
                             <constraint firstItem="UA6-AZ-HSt" firstAttribute="top" secondItem="q1B-06-SMv" secondAttribute="top" constant="25" id="FA0-gN-EJY"/>
                             <constraint firstItem="2oB-Aw-oe4" firstAttribute="centerX" secondItem="ELa-FE-U5c" secondAttribute="centerX" id="HFk-1t-JBY"/>
                             <constraint firstItem="ELa-FE-U5c" firstAttribute="leading" secondItem="q1B-06-SMv" secondAttribute="leading" id="M68-mu-Jxy"/>
                             <constraint firstItem="q1B-06-SMv" firstAttribute="bottom" secondItem="ELa-FE-U5c" secondAttribute="bottom" constant="50" id="RfY-9H-PQj"/>
+                            <constraint firstItem="FYF-CQ-qqd" firstAttribute="top" secondItem="ELa-FE-U5c" secondAttribute="bottom" constant="8" id="RhP-a3-ERS"/>
                             <constraint firstItem="UA6-AZ-HSt" firstAttribute="leading" secondItem="2oB-Aw-oe4" secondAttribute="trailing" constant="40" id="SCR-l5-FS2"/>
                             <constraint firstItem="ELa-FE-U5c" firstAttribute="trailing" secondItem="q1B-06-SMv" secondAttribute="trailing" id="St9-EH-YdY"/>
                             <constraint firstItem="2oB-Aw-oe4" firstAttribute="top" secondItem="q1B-06-SMv" secondAttribute="top" constant="25" id="W39-ZW-ckg"/>
@@ -193,17 +202,17 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qm0-vl-Saq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="e7A-eL-vuV">
                     <connections>
-                        <action selector="handlePanWithRecognizer:" destination="usC-6w-0Ci" id="NEz-oD-efK"/>
+                        <action selector="handlePan1WithRecognizer:" destination="usC-6w-0Ci" id="Juu-uV-gJm"/>
                     </connections>
                 </panGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="jS1-c4-ga0">
                     <connections>
-                        <action selector="handlePanWithRecognizer:" destination="usC-6w-0Ci" id="lev-ob-sBL"/>
+                        <action selector="handlePan2WithRecognizer:" destination="usC-6w-0Ci" id="qe5-e4-RgS"/>
                     </connections>
                 </panGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="7dX-pM-8R8">
                     <connections>
-                        <action selector="handlePanWithRecognizer:" destination="usC-6w-0Ci" id="GP7-ud-rTG"/>
+                        <action selector="handlePan3WithRecognizer:" destination="usC-6w-0Ci" id="WdN-mb-Ppe"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
