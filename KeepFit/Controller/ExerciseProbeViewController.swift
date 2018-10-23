@@ -37,7 +37,9 @@ class ExerciseProbeViewController: UIViewController {
         }
         recognizer.setTranslation(CGPoint.zero, in: self.view)
 
-        switch recognizer.view?.tag {
+        let point = AnglePoint(rawValue: (recognizer.view?.tag)!)
+
+        switch point?.rawValue {
         case 1:
             point1 = CGPoint(x: (recognizer.view?.center.x)!, y: (recognizer.view?.center.y)!)
         case 2:

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3229435A217DECBD000B2FC3 /* PointManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32294359217DECBD000B2FC3 /* PointManipulator.swift */; };
+		3229435C217EA2C5000B2FC3 /* AnglePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3229435B217EA2C5000B2FC3 /* AnglePoint.swift */; };
 		322C5CCA2035DB3E00488612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C5CC92035DB3E00488612 /* AppDelegate.swift */; };
 		322C5CCF2035DB3E00488612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322C5CCD2035DB3E00488612 /* Main.storyboard */; };
 		322C5CD12035DB3E00488612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322C5CD02035DB3E00488612 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		32294359217DECBD000B2FC3 /* PointManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointManipulator.swift; sourceTree = "<group>"; };
+		3229435B217EA2C5000B2FC3 /* AnglePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnglePoint.swift; sourceTree = "<group>"; };
 		322C5CC62035DB3E00488612 /* KeepFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		322C5CC92035DB3E00488612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		322C5CCE2035DB3E00488612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				322C5CE32035FCAB00488612 /* Exercise.swift */,
 				32EB0E6B217B94D6001E71EE /* VectorManipulator.swift */,
 				32294359217DECBD000B2FC3 /* PointManipulator.swift */,
+				3229435B217EA2C5000B2FC3 /* AnglePoint.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				322C5CE02035DBDA00488612 /* ExerciseViewController.swift in Sources */,
 				32EB0E6C217B94D6001E71EE /* VectorManipulator.swift in Sources */,
 				322C5CCA2035DB3E00488612 /* AppDelegate.swift in Sources */,
+				3229435C217EA2C5000B2FC3 /* AnglePoint.swift in Sources */,
 				32A9122E2176178800DC5CFD /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

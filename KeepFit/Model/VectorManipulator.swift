@@ -21,7 +21,6 @@ class VectorManipulator {
         return sqrt(Double(vector2.dx * vector2.dx) + Double(vector2.dy * vector2.dy))
     }
 
-
     init(vector1: CGVector, vector2: CGVector) {
         self.vector1 = vector1
         self.vector2 = vector2
