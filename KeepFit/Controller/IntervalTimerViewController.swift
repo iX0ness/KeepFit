@@ -95,8 +95,9 @@ class IntervalTimerViewController: UIViewController {
 
     @objc private func updateTimer() {
 
-        if time < 1 && setsValue == 0 {
-
+        if setsValue < 1 {
+            
+            setsValueLabel.text = "\(setsValue)"
             timer.invalidate()
 
         } else {
