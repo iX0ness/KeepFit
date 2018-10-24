@@ -20,6 +20,7 @@
 		3264C00E217F4D3D002CDB2E /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3264C00D217F4D3D002CDB2E /* MenuCollectionViewCell.swift */; };
 		3264C010217F4DD8002CDB2E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3264C00F217F4DD8002CDB2E /* MenuViewController.swift */; };
 		3264C012217F5075002CDB2E /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3264C011217F5075002CDB2E /* MenuCell.swift */; };
+		3264C014217F64AD002CDB2E /* IntervalTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3264C013217F64AD002CDB2E /* IntervalTimerViewController.swift */; };
 		32A9122E2176178800DC5CFD /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A9122D2176178800DC5CFD /* PhotoViewController.swift */; };
 		32EB0E6C217B94D6001E71EE /* VectorManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EB0E6B217B94D6001E71EE /* VectorManipulator.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		3264C00D217F4D3D002CDB2E /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		3264C00F217F4DD8002CDB2E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3264C011217F5075002CDB2E /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		3264C013217F64AD002CDB2E /* IntervalTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalTimerViewController.swift; sourceTree = "<group>"; };
 		32A9122D2176178800DC5CFD /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		32EB0E6B217B94D6001E71EE /* VectorManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorManipulator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,6 +57,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3212709821808FEA002037E6 /* IntervalTimer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IntervalTimer;
+			sourceTree = "<group>";
+		};
 		322C5CBD2035DB3E00488612 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +83,7 @@
 		322C5CC82035DB3E00488612 /* KeepFit */ = {
 			isa = PBXGroup;
 			children = (
+				3212709821808FEA002037E6 /* IntervalTimer */,
 				322C5CDE2035DBA900488612 /* Controller */,
 				322C5CDD2035DBA200488612 /* View */,
 				322C5CDC2035DB9B00488612 /* Model */,
@@ -114,6 +124,7 @@
 				325B78F5203B51AC00982D43 /* ExerciseProbeViewController.swift */,
 				32A9122D2176178800DC5CFD /* PhotoViewController.swift */,
 				3264C00F217F4DD8002CDB2E /* MenuViewController.swift */,
+				3264C013217F64AD002CDB2E /* IntervalTimerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +204,7 @@
 			files = (
 				325B78F6203B51AC00982D43 /* ExerciseProbeViewController.swift in Sources */,
 				3229435A217DECBD000B2FC3 /* PointManipulator.swift in Sources */,
+				3264C014217F64AD002CDB2E /* IntervalTimerViewController.swift in Sources */,
 				3264C012217F5075002CDB2E /* MenuCell.swift in Sources */,
 				322C5CE22035DFFC00488612 /* ExerciseTableViewCell.swift in Sources */,
 				322C5CE42035FCAB00488612 /* Exercise.swift in Sources */,

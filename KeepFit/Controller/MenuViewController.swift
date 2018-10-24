@@ -13,12 +13,15 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
     private struct Constants {
         static let menuCellIdentifier = "menuCell"
         static let exerciseProbeIdentifier = "exerciseProbe"
+        static let intervalTimerIdentifier = "intervalTimer"
         static let probeImage = "probe"
+        static let timerImage = "timer"
     }
 
     var menu = [MenuCell]()
     
     let exerciseProbe = MenuCell(image: UIImage(named: Constants.probeImage)!, name: "Probe")
+    let intervalTimer = MenuCell(image: UIImage(named: Constants.timerImage)!, name: "Timer")
 
 
     @IBOutlet weak var menuCollectionView: UICollectionView!
@@ -27,7 +30,7 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         super.viewDidLoad()
         menuCollectionView.delegate = self
         menuCollectionView.dataSource = self
-        menu = [exerciseProbe]
+        menu = [exerciseProbe, intervalTimer]
 
     }
 
@@ -47,6 +50,8 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         switch indexPath.item {
         case 0:
             performSegue(withIdentifier: Constants.exerciseProbeIdentifier, sender: self)
+        case 1:
+            performSegue(withIdentifier: Constants.intervalTimerIdentifier, sender: self)
         default:
             break
         }
