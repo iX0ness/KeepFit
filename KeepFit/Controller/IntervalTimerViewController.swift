@@ -10,118 +10,123 @@ import UIKit
 
 class IntervalTimerViewController: UIViewController {
 
-    @IBOutlet weak var setsValueLabel: UILabel!
-    @IBOutlet weak var workTimeValueLabel: UILabel!
-    @IBOutlet weak var restTimeValueLabel: UILabel!
+    //OUTLETS
+    @IBOutlet weak var startButton: UIButton!
 
-    var setsValue: Int = 0
-//    var workTimeHoursValue: Int = 0
-//    var workTimeMinutesValue: Int = 0
-//    var workTimeSecondsValue: Int = 0
+    @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var timeLabel: UILabel!
+
+    @IBOutlet weak var setsLabel: UILabel!
 
 
+    var seconds = 0
+    var sets = 0
+    var secondsTmp = 0
     var timer = Timer()
-    var time: Int = 0
-    var timeTmp: Int = 0
 
-    var restTime: Int = 0
-
-    
-
+    var isTimerRunning = false
+    var resumeTapped = false
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       setsValueLabel.text = "\(setsValue)"
-       workTimeValueLabel.text = timeToString(time: TimeInterval(time))
-       restTimeValueLabel.text = timeToString(time: TimeInterval(time))
-
+        pauseButton.isEnabled = false
     }
-
-
 
     @IBAction func increaseValue(_ sender: UIButton) {
         switch sender.tag {
         case 1:
-            setsValue+=1
-            setsValueLabel.text = "\(setsValue)"
+            sets+=1
+            setsLabel.text = "\(sets)"
 
         case 2:
 
-            time+=1
-            timeTmp+=1
-            workTimeValueLabel.text = timeToString(time: TimeInterval(time))
+            seconds+=1
+            secondsTmp+=1
+            timeLabel.text = timeToString(time: TimeInterval(seconds))
 
-        case 3:
-            restTime+=1
-            restTimeValueLabel.text = timeToString(time: TimeInterval(restTime))
+
         default:
             break
         }
-    }
 
+    }
     @IBAction func decreaseValue(_ sender: UIButton) {
-        switch sender.tag {
-        case 4:
-            setsValue-=1
-            setsValueLabel.text = "\(setsValue)"
 
-        case 5:
 
-            time-=1
-            workTimeValueLabel.text = timeToString(time: TimeInterval(time))
-        case 6:
-            restTime-=1
-            restTimeValueLabel.text = timeToString(time: TimeInterval(restTime))
-        default:
-            break
+    }
+
+    @IBAction func startButtonTapped(_ sender: UIButton) {
+        if isTimerRunning == false {
+            runTimer()
+            self.startButton.isEnabled = false
         }
     }
-    @IBAction func startTimer(_ sender: Any) {
-        runTimer()
-    }
-    @IBAction func resetTimer(_ sender: Any) {
-
-    }
-
-    @IBAction func stopTimer(_ sender: Any) {
-
-    }
-
-    func runTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
-    }
-
-    @objc private func updateTimer() {
-
-        if setsValue < 1 {
-            
-            setsValueLabel.text = "\(setsValue)"
+    @IBAction func pauseButtonTapped(_ sender: UIButton) {
+        if self.resumeTapped == false {
             timer.invalidate()
-
+            isTimerRunning = false
+            self.resumeTapped = true
+            self.pauseButton.setTitle("Resume",for: .normal)
         } else {
+            runTimer()
+            self.resumeTapped = false
+            isTimerRunning = true
+            self.pauseButton.setTitle("Pause",for: .normal)
+        }
+    }
 
-            if time == 0 {
-                setsValue-=1
-                time = timeTmp
+    @IBAction func resetButtonTapped(_ sender: UIButton) {
+        timer.invalidate()
+        self.seconds = 0
+        self.sets = 0
+        self.secondsTmp = 0
+        setsLabel.text = "\(sets)"
+        timeLabel.text = timeToString(time: TimeInterval(seconds))
+        isTimerRunning = false
+        pauseButton.isEnabled = false
+        startButton.isEnabled = true
+    }
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(IntervalTimerViewController.updateTimer)), userInfo: nil, repeats: true)
+        isTimerRunning = true
+        pauseButton.isEnabled = true
+    }
+
+    @objc func updateTimer() {
+
+        if sets < 1 {
+            timer.invalidate()
+        } else {
+            if seconds < 1 {
+                sets -= 1
+                setsLabel.text = "\(sets)"
+                seconds = secondsTmp
+                timeLabel.text = timeToString(time: TimeInterval(seconds))
             } else {
-                time-=1
-                workTimeValueLabel.text = timeToString(time: TimeInterval(time))
-                setsValueLabel.text = "\(setsValue)"
-            }
 
+                seconds -= 1
+                timeLabel.text = timeToString(time: TimeInterval(seconds))
+
+
+            }
         }
 
     }
+
+
+
+
+
 
     func timeToString(time: TimeInterval) -> String{
 
-        var workTimeHoursValue = Int(time) / 3600
-        var workTimeMinutesValue = Int(time) / 60 % 60
-        var workTimeSecondsValue = Int(time) % 60
+        let hours = Int(time) / 3600
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
 
-        return ("\(String(format:"%02i", workTimeHoursValue)):\(String(format:"%02i", workTimeMinutesValue)):\(String(format:"%02i", workTimeSecondsValue))")
+        return ("\(String(format:"%02i", hours)) : \(String(format:"%02i", minutes)) : \(String(format:"%02i", seconds))")
     }
+
 
 }
