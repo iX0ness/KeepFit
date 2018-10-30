@@ -114,11 +114,6 @@ class IntervalTimerViewController: UIViewController {
 
     }
 
-
-
-
-
-
     func timeToString(time: TimeInterval) -> String{
 
         let hours = Int(time) / 3600
@@ -127,6 +122,5 @@ class IntervalTimerViewController: UIViewController {
 
         return ("\(String(format:"%02i", hours)) : \(String(format:"%02i", minutes)) : \(String(format:"%02i", seconds))")
     }
-
 
 }
