@@ -7,15 +7,22 @@
 //
 
 import Foundation
+import RealmSwift
 import UIKit
 
-class Exercise {
-    var name: String
-    var image: UIImage
+class Exercise: Object {
 
-    init(name: String, image: UIImage) {
+    @objc dynamic var name = ""
+    @objc dynamic var imagePath = ""
+
+    override class func primaryKey() -> String? {
+        return "name"
+    }
+
+    convenience init(name: String, imagePath: String) {
+        self.init()
         self.name = name
-        self.image = image
+        self.imagePath = imagePath
     }
 }
 

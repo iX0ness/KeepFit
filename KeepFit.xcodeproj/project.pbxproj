@@ -23,6 +23,9 @@
 		3264C014217F64AD002CDB2E /* IntervalTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3264C013217F64AD002CDB2E /* IntervalTimerViewController.swift */; };
 		32A9122E2176178800DC5CFD /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A9122D2176178800DC5CFD /* PhotoViewController.swift */; };
 		32EB0E6C217B94D6001E71EE /* VectorManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EB0E6B217B94D6001E71EE /* VectorManipulator.swift */; };
+		32F75D112191A688000A83B1 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F75D102191A688000A83B1 /* DBManager.swift */; };
+		32F75D132191A7C4000A83B1 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F75D122191A7C4000A83B1 /* Training.swift */; };
+		BEDC842033990F28CD5375C5 /* Pods_KeepFit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9C28B0354568EAC3937033 /* Pods_KeepFit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,11 @@
 		3264C013217F64AD002CDB2E /* IntervalTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalTimerViewController.swift; sourceTree = "<group>"; };
 		32A9122D2176178800DC5CFD /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		32EB0E6B217B94D6001E71EE /* VectorManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorManipulator.swift; sourceTree = "<group>"; };
+		32F75D102191A688000A83B1 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		32F75D122191A7C4000A83B1 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		AD9C28B0354568EAC3937033 /* Pods_KeepFit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepFit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C475604635FFAE8FE6A1AC0C /* Pods-KeepFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepFit.release.xcconfig"; path = "Target Support Files/Pods-KeepFit/Pods-KeepFit.release.xcconfig"; sourceTree = "<group>"; };
+		FC4673A7923E24C1D1C28F8E /* Pods-KeepFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepFit.debug.xcconfig"; path = "Target Support Files/Pods-KeepFit/Pods-KeepFit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDC842033990F28CD5375C5 /* Pods_KeepFit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +71,8 @@
 			children = (
 				322C5CC82035DB3E00488612 /* KeepFit */,
 				322C5CC72035DB3E00488612 /* Products */,
+				C1549F8EBC43D99EB8489890 /* Pods */,
+				B10AB846B700E3C3A3DC39E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +87,7 @@
 		322C5CC82035DB3E00488612 /* KeepFit */ = {
 			isa = PBXGroup;
 			children = (
+				32F75D0F2191A670000A83B1 /* Database */,
 				322C5CDE2035DBA900488612 /* Controller */,
 				322C5CDD2035DBA200488612 /* View */,
 				322C5CDC2035DB9B00488612 /* Model */,
@@ -96,6 +108,7 @@
 				32294359217DECBD000B2FC3 /* PointManipulator.swift */,
 				3229435B217EA2C5000B2FC3 /* AnglePoint.swift */,
 				3264C011217F5075002CDB2E /* MenuCell.swift */,
+				32F75D122191A7C4000A83B1 /* Training.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,6 +134,31 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		32F75D0F2191A670000A83B1 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				32F75D102191A688000A83B1 /* DBManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		B10AB846B700E3C3A3DC39E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD9C28B0354568EAC3937033 /* Pods_KeepFit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1549F8EBC43D99EB8489890 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC4673A7923E24C1D1C28F8E /* Pods-KeepFit.debug.xcconfig */,
+				C475604635FFAE8FE6A1AC0C /* Pods-KeepFit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,9 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 322C5CD82035DB3E00488612 /* Build configuration list for PBXNativeTarget "KeepFit" */;
 			buildPhases = (
+				D2C557A5B9A5F9FF656ED421 /* [CP] Check Pods Manifest.lock */,
 				322C5CC22035DB3E00488612 /* Sources */,
 				322C5CC32035DB3E00488612 /* Frameworks */,
 				322C5CC42035DB3E00488612 /* Resources */,
+				E3055A6EFEB18E14C79DF60F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,6 +229,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D2C557A5B9A5F9FF656ED421 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KeepFit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3055A6EFEB18E14C79DF60F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KeepFit/Pods-KeepFit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeepFit/Pods-KeepFit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		322C5CC22035DB3E00488612 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -198,6 +287,7 @@
 				3229435A217DECBD000B2FC3 /* PointManipulator.swift in Sources */,
 				3264C014217F64AD002CDB2E /* IntervalTimerViewController.swift in Sources */,
 				3264C012217F5075002CDB2E /* MenuCell.swift in Sources */,
+				32F75D132191A7C4000A83B1 /* Training.swift in Sources */,
 				322C5CE22035DFFC00488612 /* ExerciseTableViewCell.swift in Sources */,
 				322C5CE42035FCAB00488612 /* Exercise.swift in Sources */,
 				3264C010217F4DD8002CDB2E /* MenuViewController.swift in Sources */,
@@ -207,6 +297,7 @@
 				3229435C217EA2C5000B2FC3 /* AnglePoint.swift in Sources */,
 				32A9122E2176178800DC5CFD /* PhotoViewController.swift in Sources */,
 				3264C00E217F4D3D002CDB2E /* MenuCollectionViewCell.swift in Sources */,
+				32F75D112191A688000A83B1 /* DBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +436,7 @@
 		};
 		322C5CD92035DB3E00488612 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC4673A7923E24C1D1C28F8E /* Pods-KeepFit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -360,6 +452,7 @@
 		};
 		322C5CDA2035DB3E00488612 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C475604635FFAE8FE6A1AC0C /* Pods-KeepFit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

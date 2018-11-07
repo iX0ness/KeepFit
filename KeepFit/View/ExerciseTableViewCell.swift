@@ -25,8 +25,15 @@ class ExerciseTableViewCell: UITableViewCell {
 
     func configure(with exercise: Exercise) {
         exerciseNameLabel.text = exercise.name
-        exerciceImageView.image = exercise.image
-    
+        if let _url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let path = _url.appendingPathComponent(exercise.imagePath)
+            do {
+                let data = try Data(contentsOf: path)
+                exerciceImageView.image = UIImage(data: data)
+            }catch {
+                fatalError("SHLYAPA")
+            }
+        }
     }
 
 }

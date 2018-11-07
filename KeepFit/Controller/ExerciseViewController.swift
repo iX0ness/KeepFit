@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ExerciseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -20,22 +21,20 @@ class ExerciseViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var exerciseTableView: UITableView!
 
-    let thruster = Exercise(name: "Thruster", image: UIImage(named: "thruster.jpg")!)
-    let ringdip = Exercise(name: "Ring dip", image: UIImage(named: "ringdip.jpg")!)
-    let burpee = Exercise(name: "Burpee", image: UIImage(named: "burpee.jpg")!)
-    let snatch = Exercise(name: "Snatch", image: UIImage(named: "snatch.jpg")!)
 
 
-    var exercises = [Exercise]()
+
+    var exercises: Results<Exercise>!
     var selectedExercise: Exercise?
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        exerciseTableView.delegate = self
-        exerciseTableView.dataSource = self
-
-        exercises = [thruster, ringdip, burpee, snatch]
+        saveExcercises {
+            self.exercises = DBManager.sharedInstance.getDataFromDB()
+            self.exerciseTableView.delegate = self
+            self.exerciseTableView.dataSource = self
+        }
         setupUI()
 
 
@@ -76,6 +75,41 @@ class ExerciseViewController: UIViewController, UITableViewDelegate, UITableView
 //        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
 //        self.navigationController?.navigationBar.shadowImage = UIImage(named: Constants.shadowImage)
 
+    }
+
+    private func saveExcercises(completion: @escaping () -> ()) {
+        let thruster = Exercise(name: "Thruster", imagePath: UIImage(named: "thruster")?.saveInLocalStorage(imageName: "Thruster") ?? "")
+        let snatch = Exercise(name: "Snatch", imagePath: UIImage(named: "snatch")?.saveInLocalStorage(imageName: "Snatch") ?? "")
+        let ringdip = Exercise(name: "Ringdip", imagePath: UIImage(named: "ringdip")?.saveInLocalStorage(imageName: "Ringdip") ?? "")
+        let burpee = Exercise(name: "Burpee", imagePath: UIImage(named: "burpee")?.saveInLocalStorage(imageName: "Burpee") ?? "")
+
+        DBManager.sharedInstance.saveObjectInDB(thruster, completion: {
+            print("Thruster successfully added to DB")
+            completion()
+        }) { (error) in
+            print(error)
+        }
+
+        DBManager.sharedInstance.saveObjectInDB(snatch, completion: {
+            print("Snatch successfully added to DB")
+            completion()
+        }) { (error) in
+            print(error)
+        }
+
+        DBManager.sharedInstance.saveObjectInDB(ringdip, completion: {
+            print("Ringdip successfully added to DB")
+            completion()
+        }) { (error) in
+            print(error)
+        }
+
+        DBManager.sharedInstance.saveObjectInDB(burpee, completion: {
+            print("Burpee successfully added to DB")
+            completion()
+        }) { (error) in
+            print(error)
+        }
     }
 
 
