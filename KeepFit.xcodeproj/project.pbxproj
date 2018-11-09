@@ -19,12 +19,12 @@
 		325B78F6203B51AC00982D43 /* ExerciseProbeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325B78F5203B51AC00982D43 /* ExerciseProbeViewController.swift */; };
 		3264C00E217F4D3D002CDB2E /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3264C00D217F4D3D002CDB2E /* MenuCollectionViewCell.swift */; };
 		3264C010217F4DD8002CDB2E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3264C00F217F4DD8002CDB2E /* MenuViewController.swift */; };
-		3264C012217F5075002CDB2E /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3264C011217F5075002CDB2E /* MenuCell.swift */; };
+		3264C012217F5075002CDB2E /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3264C011217F5075002CDB2E /* MenuItem.swift */; };
 		3264C014217F64AD002CDB2E /* IntervalTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3264C013217F64AD002CDB2E /* IntervalTimerViewController.swift */; };
 		32A9122E2176178800DC5CFD /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A9122D2176178800DC5CFD /* PhotoViewController.swift */; };
+		32BC9EF4219344110010F397 /* TrainingHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BC9EF3219344110010F397 /* TrainingHistoryViewController.swift */; };
 		32EB0E6C217B94D6001E71EE /* VectorManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EB0E6B217B94D6001E71EE /* VectorManipulator.swift */; };
 		32F75D112191A688000A83B1 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F75D102191A688000A83B1 /* DBManager.swift */; };
-		32F75D132191A7C4000A83B1 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F75D122191A7C4000A83B1 /* Training.swift */; };
 		BEDC842033990F28CD5375C5 /* Pods_KeepFit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9C28B0354568EAC3937033 /* Pods_KeepFit.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,12 +43,12 @@
 		325B78F5203B51AC00982D43 /* ExerciseProbeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseProbeViewController.swift; sourceTree = "<group>"; };
 		3264C00D217F4D3D002CDB2E /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		3264C00F217F4DD8002CDB2E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		3264C011217F5075002CDB2E /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		3264C011217F5075002CDB2E /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		3264C013217F64AD002CDB2E /* IntervalTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalTimerViewController.swift; sourceTree = "<group>"; };
 		32A9122D2176178800DC5CFD /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		32BC9EF3219344110010F397 /* TrainingHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingHistoryViewController.swift; sourceTree = "<group>"; };
 		32EB0E6B217B94D6001E71EE /* VectorManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorManipulator.swift; sourceTree = "<group>"; };
 		32F75D102191A688000A83B1 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
-		32F75D122191A7C4000A83B1 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		AD9C28B0354568EAC3937033 /* Pods_KeepFit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepFit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C475604635FFAE8FE6A1AC0C /* Pods-KeepFit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepFit.release.xcconfig"; path = "Target Support Files/Pods-KeepFit/Pods-KeepFit.release.xcconfig"; sourceTree = "<group>"; };
 		FC4673A7923E24C1D1C28F8E /* Pods-KeepFit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepFit.debug.xcconfig"; path = "Target Support Files/Pods-KeepFit/Pods-KeepFit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,8 +107,6 @@
 				32EB0E6B217B94D6001E71EE /* VectorManipulator.swift */,
 				32294359217DECBD000B2FC3 /* PointManipulator.swift */,
 				3229435B217EA2C5000B2FC3 /* AnglePoint.swift */,
-				3264C011217F5075002CDB2E /* MenuCell.swift */,
-				32F75D122191A7C4000A83B1 /* Training.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -118,6 +116,7 @@
 			children = (
 				322C5CE12035DFFC00488612 /* ExerciseTableViewCell.swift */,
 				3264C00D217F4D3D002CDB2E /* MenuCollectionViewCell.swift */,
+				3264C011217F5075002CDB2E /* MenuItem.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -130,6 +129,7 @@
 				32A9122D2176178800DC5CFD /* PhotoViewController.swift */,
 				3264C00F217F4DD8002CDB2E /* MenuViewController.swift */,
 				3264C013217F64AD002CDB2E /* IntervalTimerViewController.swift */,
+				32BC9EF3219344110010F397 /* TrainingHistoryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -286,8 +286,8 @@
 				325B78F6203B51AC00982D43 /* ExerciseProbeViewController.swift in Sources */,
 				3229435A217DECBD000B2FC3 /* PointManipulator.swift in Sources */,
 				3264C014217F64AD002CDB2E /* IntervalTimerViewController.swift in Sources */,
-				3264C012217F5075002CDB2E /* MenuCell.swift in Sources */,
-				32F75D132191A7C4000A83B1 /* Training.swift in Sources */,
+				32BC9EF4219344110010F397 /* TrainingHistoryViewController.swift in Sources */,
+				3264C012217F5075002CDB2E /* MenuItem.swift in Sources */,
 				322C5CE22035DFFC00488612 /* ExerciseTableViewCell.swift in Sources */,
 				322C5CE42035FCAB00488612 /* Exercise.swift in Sources */,
 				3264C010217F4DD8002CDB2E /* MenuViewController.swift in Sources */,

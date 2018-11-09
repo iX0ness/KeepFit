@@ -14,14 +14,18 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         static let menuCellIdentifier = "menuCell"
         static let exerciseProbeIdentifier = "exerciseProbe"
         static let intervalTimerIdentifier = "intervalTimer"
+        static let trainingHistoryIdentifier = "trainingHistory"
         static let probeImage = "probe"
         static let timerImage = "timer"
+        static let historyImage = "history"
     }
 
-    var menu = [MenuCell]()
+    var menu = [MenuItem]()
     
-    let exerciseProbe = MenuCell(image: UIImage(named: Constants.probeImage)!, name: "Probe")
-    let intervalTimer = MenuCell(image: UIImage(named: Constants.timerImage)!, name: "Timer")
+    let exerciseProbe = MenuItem(image: UIImage(named: Constants.probeImage)!, name: "Probe")
+    let intervalTimer = MenuItem(image: UIImage(named: Constants.timerImage)!, name: "Timer")
+    let history = MenuItem(image: UIImage(named: Constants.historyImage)!, name: "History")
+
 
 
     @IBOutlet weak var menuCollectionView: UICollectionView!
@@ -30,7 +34,7 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         super.viewDidLoad()
         menuCollectionView.delegate = self
         menuCollectionView.dataSource = self
-        menu = [exerciseProbe, intervalTimer]
+        menu = [exerciseProbe, intervalTimer, history]
 
     }
 
@@ -52,6 +56,8 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
             performSegue(withIdentifier: Constants.exerciseProbeIdentifier, sender: self)
         case 1:
             performSegue(withIdentifier: Constants.intervalTimerIdentifier, sender: self)
+        case 2:
+            performSegue(withIdentifier: Constants.trainingHistoryIdentifier, sender: self)
         default:
             break
         }

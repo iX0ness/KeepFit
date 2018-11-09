@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class PointManipulator {
-
+    
     var point1: CGPoint
     var point2: CGPoint
     var point3: CGPoint

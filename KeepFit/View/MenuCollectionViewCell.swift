@@ -13,7 +13,7 @@ class MenuCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var cellLabel: UILabel!
 
-    func configureCell(with cell: MenuCell) {
+    func configureCell(with cell: MenuItem) {
         self.cellImageView.image = cell.image
         self.cellLabel.text = cell.name
     }

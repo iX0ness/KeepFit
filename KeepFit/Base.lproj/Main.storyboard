@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5bS-P0-5t0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5bS-P0-5t0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -80,6 +80,43 @@
             </objects>
             <point key="canvasLocation" x="1624.8" y="132.68365817091455"/>
         </scene>
+        <!--Training history-->
+        <scene sceneID="vYG-hg-HJ1">
+            <objects>
+                <viewController id="Lsi-Eb-YIk" customClass="TrainingHistoryViewController" customModule="KeepFit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QlZ-0a-urm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u68-1b-Wui">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="diX-F8-GF0" firstAttribute="bottom" secondItem="u68-1b-Wui" secondAttribute="bottom" id="3AG-4E-3zI"/>
+                            <constraint firstItem="diX-F8-GF0" firstAttribute="trailing" secondItem="u68-1b-Wui" secondAttribute="trailing" id="Tio-pX-nl2"/>
+                            <constraint firstItem="u68-1b-Wui" firstAttribute="leading" secondItem="diX-F8-GF0" secondAttribute="leading" id="gH4-K7-n0K"/>
+                            <constraint firstItem="u68-1b-Wui" firstAttribute="top" secondItem="diX-F8-GF0" secondAttribute="top" id="zJr-ma-rVL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="diX-F8-GF0"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Training history" id="XtT-yN-XNG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="9KN-9a-lPf">
+                            <connections>
+                                <action selector="addTraining:" destination="Lsi-Eb-YIk" id="Ans-Bc-ZGo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="trainingHistoryTableView" destination="u68-1b-Wui" id="3LI-t1-TmF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M65-QD-mZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1625" y="-883"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="QPW-bH-mgO">
             <objects>
@@ -147,6 +184,7 @@
                         <outlet property="menuCollectionView" destination="BUr-HD-FLn" id="UR0-5w-FBp"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="exerciseProbe" id="6wu-EJ-DsS"/>
                         <segue destination="oE4-tm-QaA" kind="show" identifier="intervalTimer" id="N96-W0-gKj"/>
+                        <segue destination="Lsi-Eb-YIk" kind="show" identifier="trainingHistory" id="uU1-k3-FpF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAu-1p-jLC" userLabel="First Responder" sceneMemberID="firstResponder"/>

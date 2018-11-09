@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct MenuCell {
+struct MenuItem {
     
     let image: UIImage
     let name: String

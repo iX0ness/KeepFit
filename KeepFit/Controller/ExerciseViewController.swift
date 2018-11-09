@@ -112,8 +112,4 @@ class ExerciseViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
 
-
-
-
-
 }
