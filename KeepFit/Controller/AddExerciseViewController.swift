@@ -54,8 +54,21 @@ class AddExerciseViewController: UIViewController,UITableViewDelegate, UITableVi
         return cell
     }
 
-    
-    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            trainingExercisesTableView.beginUpdates()
+            let exercise = training.exercises[indexPath.row]
+            DBManager.sharedInstance.deleteObject(object: exercise)
+            trainingExercisesTableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            trainingExercisesTableView.endUpdates()
+            
+
+        }
+    }
 
     @IBAction func addExercise(_ sender: Any) {
         performSegue(withIdentifier: Constants.exrcisesListIdentifier, sender: self)
@@ -72,9 +85,5 @@ class AddExerciseViewController: UIViewController,UITableViewDelegate, UITableVi
         
 
     }
-
-
-
-
 
 }

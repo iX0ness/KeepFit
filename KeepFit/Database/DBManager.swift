@@ -71,12 +71,13 @@ class DBManager {
 
     func getExercisesFromDB() -> Results<Exercise> {
         let results: Results<Exercise> = database.objects(Exercise.self)
-//        print("DB size: ", results.count)
-//        for ex in results {
-//            print(ex.name)
-//            print(ex.imagePath)
-//        }
         return results
+    }
+
+    func deleteObject(object: Object) {
+        try? database.write {
+            database.delete(object)
+        }
     }
 
     func incrementID() -> Int {
