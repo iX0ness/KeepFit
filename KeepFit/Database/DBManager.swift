@@ -25,7 +25,7 @@ class DBManager {
     func saveObjectInDB<T: Object>(_ model: T, completion: @escaping () -> (), failure: @escaping (String) -> ()) {
         do {
             try database.write {
-                database.add(model, update: true)
+                database.add(model, update: false)
                 completion()
             }
         } catch let error {
@@ -33,14 +33,54 @@ class DBManager {
         }
     }
 
-    func getDataFromDB() -> Results<Exercise> {
-        let results: Results<Exercise> = database.objects(Exercise.self)
-        print("DB size: ", results.count)
-        for ex in results {
-            print(ex.name)
-            print(ex.imagePath)
+    func populateDB(_ model: Exercise){
+        do {
+            try database.write {
+                database.add(model, update: true)
+            }
+        } catch let error {
+            print(error.localizedDescription)
         }
+    }
+
+    func addExerciseForTraining(trainingId: Int, exercise: TrainingExercise) {
+
+        let training = getTrainingById(id: trainingId)
+
+
+        try? database.write {
+            training.exercises.append(exercise)
+        }
+
+        try! database.write {
+            database.add(training, update: true)
+        }
+
+    }
+
+    func getTrainingsFromDB() -> Results<Training> {
+        let results: Results<Training> = database.objects(Training.self)
         return results
+    }
+
+    func getTrainingById(id: Int) -> Training {
+        let training = database.object(ofType: Training.self, forPrimaryKey: id)
+
+        return training!
+    }
+
+    func getExercisesFromDB() -> Results<Exercise> {
+        let results: Results<Exercise> = database.objects(Exercise.self)
+//        print("DB size: ", results.count)
+//        for ex in results {
+//            print(ex.name)
+//            print(ex.imagePath)
+//        }
+        return results
+    }
+
+    func incrementID() -> Int {
+        return (database.objects(Training.self).max(ofProperty: "id") as Int? ?? 0) + 1
     }
 
 

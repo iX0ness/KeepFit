@@ -13,9 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        loadDatabase()
+        
         return true
     }
 
@@ -39,6 +39,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+
+//    private func saveDataToDatabase() {
+//        let thruster = Exercise(name: "Thruster", imagePath: UIImage(named: "thruster")?.saveInLocalStorage(imageName: "Thruster") ?? "")
+//        let snatch = Exercise(name: "Snatch", imagePath: UIImage(named: "snatch")?.saveInLocalStorage(imageName: "Snatch") ?? "")
+//        let ringdip = Exercise(name: "Ringdip", imagePath: UIImage(named: "ringdip")?.saveInLocalStorage(imageName: "Ringdip") ?? "")
+//        let burpee = Exercise(name: "Burpee", imagePath: UIImage(named: "burpee")?.saveInLocalStorage(imageName: "Burpee") ?? "")
+//
+//        DBManager.sharedInstance.saveObjectInDB(thruster, completion: {
+//            print("Thruster successfully added to DB")
+//
+//        }) { (error) in
+//            print(error)
+//        }
+//
+//        DBManager.sharedInstance.saveObjectInDB(snatch, completion: {
+//            print("Snatch successfully added to DB")
+//
+//        }) { (error) in
+//            print(error)
+//        }
+//
+//        DBManager.sharedInstance.saveObjectInDB(ringdip, completion: {
+//            print("Ringdip successfully added to DB")
+//
+//        }) { (error) in
+//            print(error)
+//        }
+//
+//        DBManager.sharedInstance.saveObjectInDB(burpee, completion: {
+//            print("Burpee successfully added to DB")
+//
+//        }) { (error) in
+//            print(error)
+//        }
+//    }
+
+
+    private func loadDatabase() {
+        let thruster = Exercise(name: "Thruster", imagePath: UIImage(named: "thruster")?.saveInLocalStorage(imageName: "Thruster") ?? "")
+        let snatch = Exercise(name: "Snatch", imagePath: UIImage(named: "snatch")?.saveInLocalStorage(imageName: "Snatch") ?? "")
+        let ringdip = Exercise(name: "Ringdip", imagePath: UIImage(named: "ringdip")?.saveInLocalStorage(imageName: "Ringdip") ?? "")
+        let burpee = Exercise(name: "Burpee", imagePath: UIImage(named: "burpee")?.saveInLocalStorage(imageName: "Burpee") ?? "")
+
+        DBManager.sharedInstance.populateDB(thruster)
+        DBManager.sharedInstance.populateDB(snatch)
+        DBManager.sharedInstance.populateDB(ringdip)
+        DBManager.sharedInstance.populateDB(burpee)
+
     }
 
 

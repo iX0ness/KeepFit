@@ -30,11 +30,9 @@ class ExerciseViewController: UIViewController, UITableViewDelegate, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        saveExcercises {
-            self.exercises = DBManager.sharedInstance.getDataFromDB()
-            self.exerciseTableView.delegate = self
-            self.exerciseTableView.dataSource = self
-        }
+        self.exercises = DBManager.sharedInstance.getExercisesFromDB()
+        self.exerciseTableView.delegate = self
+        self.exerciseTableView.dataSource = self
         setupUI()
 
 
@@ -63,8 +61,6 @@ class ExerciseViewController: UIViewController, UITableViewDelegate, UITableView
             let destinationVC = segue.destination as! PhotoViewController
             destinationVC.exerciseName = selectedExercise?.name
         }
-
-
     }
 
     func setupUI() {
@@ -75,41 +71,6 @@ class ExerciseViewController: UIViewController, UITableViewDelegate, UITableView
 //        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
 //        self.navigationController?.navigationBar.shadowImage = UIImage(named: Constants.shadowImage)
 
-    }
-
-    private func saveExcercises(completion: @escaping () -> ()) {
-        let thruster = Exercise(name: "Thruster", imagePath: UIImage(named: "thruster")?.saveInLocalStorage(imageName: "Thruster") ?? "")
-        let snatch = Exercise(name: "Snatch", imagePath: UIImage(named: "snatch")?.saveInLocalStorage(imageName: "Snatch") ?? "")
-        let ringdip = Exercise(name: "Ringdip", imagePath: UIImage(named: "ringdip")?.saveInLocalStorage(imageName: "Ringdip") ?? "")
-        let burpee = Exercise(name: "Burpee", imagePath: UIImage(named: "burpee")?.saveInLocalStorage(imageName: "Burpee") ?? "")
-
-        DBManager.sharedInstance.saveObjectInDB(thruster, completion: {
-            print("Thruster successfully added to DB")
-            completion()
-        }) { (error) in
-            print(error)
-        }
-
-        DBManager.sharedInstance.saveObjectInDB(snatch, completion: {
-            print("Snatch successfully added to DB")
-            completion()
-        }) { (error) in
-            print(error)
-        }
-
-        DBManager.sharedInstance.saveObjectInDB(ringdip, completion: {
-            print("Ringdip successfully added to DB")
-            completion()
-        }) { (error) in
-            print(error)
-        }
-
-        DBManager.sharedInstance.saveObjectInDB(burpee, completion: {
-            print("Burpee successfully added to DB")
-            completion()
-        }) { (error) in
-            print(error)
-        }
     }
 
 }

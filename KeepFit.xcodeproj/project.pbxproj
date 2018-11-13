@@ -16,6 +16,12 @@
 		322C5CE02035DBDA00488612 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C5CDF2035DBDA00488612 /* ExerciseViewController.swift */; };
 		322C5CE22035DFFC00488612 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C5CE12035DFFC00488612 /* ExerciseTableViewCell.swift */; };
 		322C5CE42035FCAB00488612 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C5CE32035FCAB00488612 /* Exercise.swift */; };
+		325ACF012195B35C004D0754 /* GymSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ACF002195B35C004D0754 /* GymSet.swift */; };
+		325ACF032195B380004D0754 /* TrainingExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ACF022195B380004D0754 /* TrainingExercise.swift */; };
+		325ACF052195B3D7004D0754 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ACF042195B3D7004D0754 /* Training.swift */; };
+		325ACF072195B996004D0754 /* AddExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ACF062195B996004D0754 /* AddExerciseViewController.swift */; };
+		325ACF092195E049004D0754 /* ExercisesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ACF082195E049004D0754 /* ExercisesListViewController.swift */; };
+		325ACF0D219705DC004D0754 /* GymSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ACF0C219705DC004D0754 /* GymSetViewController.swift */; };
 		325B78F6203B51AC00982D43 /* ExerciseProbeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325B78F5203B51AC00982D43 /* ExerciseProbeViewController.swift */; };
 		3264C00E217F4D3D002CDB2E /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3264C00D217F4D3D002CDB2E /* MenuCollectionViewCell.swift */; };
 		3264C010217F4DD8002CDB2E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3264C00F217F4DD8002CDB2E /* MenuViewController.swift */; };
@@ -40,6 +46,12 @@
 		322C5CDF2035DBDA00488612 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		322C5CE12035DFFC00488612 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		322C5CE32035FCAB00488612 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		325ACF002195B35C004D0754 /* GymSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymSet.swift; sourceTree = "<group>"; };
+		325ACF022195B380004D0754 /* TrainingExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingExercise.swift; sourceTree = "<group>"; };
+		325ACF042195B3D7004D0754 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		325ACF062195B996004D0754 /* AddExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExerciseViewController.swift; sourceTree = "<group>"; };
+		325ACF082195E049004D0754 /* ExercisesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesListViewController.swift; sourceTree = "<group>"; };
+		325ACF0C219705DC004D0754 /* GymSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymSetViewController.swift; sourceTree = "<group>"; };
 		325B78F5203B51AC00982D43 /* ExerciseProbeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseProbeViewController.swift; sourceTree = "<group>"; };
 		3264C00D217F4D3D002CDB2E /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		3264C00F217F4DD8002CDB2E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +119,9 @@
 				32EB0E6B217B94D6001E71EE /* VectorManipulator.swift */,
 				32294359217DECBD000B2FC3 /* PointManipulator.swift */,
 				3229435B217EA2C5000B2FC3 /* AnglePoint.swift */,
+				325ACF002195B35C004D0754 /* GymSet.swift */,
+				325ACF022195B380004D0754 /* TrainingExercise.swift */,
+				325ACF042195B3D7004D0754 /* Training.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,6 +145,9 @@
 				3264C00F217F4DD8002CDB2E /* MenuViewController.swift */,
 				3264C013217F64AD002CDB2E /* IntervalTimerViewController.swift */,
 				32BC9EF3219344110010F397 /* TrainingHistoryViewController.swift */,
+				325ACF062195B996004D0754 /* AddExerciseViewController.swift */,
+				325ACF082195E049004D0754 /* ExercisesListViewController.swift */,
+				325ACF0C219705DC004D0754 /* GymSetViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -283,17 +301,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				325ACF012195B35C004D0754 /* GymSet.swift in Sources */,
 				325B78F6203B51AC00982D43 /* ExerciseProbeViewController.swift in Sources */,
+				325ACF092195E049004D0754 /* ExercisesListViewController.swift in Sources */,
 				3229435A217DECBD000B2FC3 /* PointManipulator.swift in Sources */,
+				325ACF032195B380004D0754 /* TrainingExercise.swift in Sources */,
 				3264C014217F64AD002CDB2E /* IntervalTimerViewController.swift in Sources */,
+				325ACF072195B996004D0754 /* AddExerciseViewController.swift in Sources */,
 				32BC9EF4219344110010F397 /* TrainingHistoryViewController.swift in Sources */,
 				3264C012217F5075002CDB2E /* MenuItem.swift in Sources */,
+				325ACF052195B3D7004D0754 /* Training.swift in Sources */,
 				322C5CE22035DFFC00488612 /* ExerciseTableViewCell.swift in Sources */,
 				322C5CE42035FCAB00488612 /* Exercise.swift in Sources */,
 				3264C010217F4DD8002CDB2E /* MenuViewController.swift in Sources */,
 				322C5CE02035DBDA00488612 /* ExerciseViewController.swift in Sources */,
 				32EB0E6C217B94D6001E71EE /* VectorManipulator.swift in Sources */,
 				322C5CCA2035DB3E00488612 /* AppDelegate.swift in Sources */,
+				325ACF0D219705DC004D0754 /* GymSetViewController.swift in Sources */,
 				3229435C217EA2C5000B2FC3 /* AnglePoint.swift in Sources */,
 				32A9122E2176178800DC5CFD /* PhotoViewController.swift in Sources */,
 				3264C00E217F4D3D002CDB2E /* MenuCollectionViewCell.swift in Sources */,
