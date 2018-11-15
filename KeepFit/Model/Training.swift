@@ -18,7 +18,7 @@ class Training: Object {
 
     convenience init(date: NSDate, exercise: TrainingExercise) {
         self.init()
-        self.date = date
+        //self.date = date
         self.exercises.append(exercise)
     }
 

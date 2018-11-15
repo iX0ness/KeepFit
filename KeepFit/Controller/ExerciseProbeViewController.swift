@@ -15,6 +15,7 @@ class ExerciseProbeViewController: UIViewController {
     var point3: CGPoint!
 
     var probePhoto: UIImage?
+    var exerciseName: String!
     @IBOutlet weak var probeImageView: UIImageView!
     
     @IBOutlet weak var firstPoint: UIImageView!
@@ -58,11 +59,21 @@ class ExerciseProbeViewController: UIViewController {
         let dotProduct = Double(manipulator.getDotProduct())
         let cosAngle = dotProduct / (manipulator.vector1Abs * manipulator.vector2Abs)
 
+//        switch exerciseName {
+//        case "Thruster":
+//            
+//        default:
+//            <#code#>
+//        }
+
         let alert = UIAlertController(title: "Photo Source", message: "Choose source", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         alert.message = "\(cosAngle)"
         self.present(alert, animated: true, completion: nil)
 
     }
+
+
+
 
 }

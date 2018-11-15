@@ -9,7 +9,7 @@
 import UIKit
 
 protocol PassGymSetDelegate {
-    func passData(exerciseName: String, gymSet: GymSet)
+    func passData(gymSet: GymSet)
 }
 
 class GymSetViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -17,7 +17,7 @@ class GymSetViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var exerciseNameLabel: UILabel!
     @IBOutlet weak var repsTextField: UITextField!
     @IBOutlet weak var kilosTextField: UITextField!
-    //@IBOutlet weak var timeTextField: UITextField!
+
     @IBOutlet weak var timePicker: UIPickerView!
 
     var delegate: PassGymSetDelegate?
@@ -30,6 +30,7 @@ class GymSetViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         super.viewDidLoad()
         timePicker.delegate = self
         timePicker.dataSource = self
+        //exerciseNameLabel.text = exerciseName
 
 
     }
@@ -79,7 +80,7 @@ class GymSetViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             //timeTextField.text = ""
         }
 
-        delegate?.passData(exerciseName: exerciseName, gymSet: set)
+        delegate?.passData(gymSet: set)
 
 
 

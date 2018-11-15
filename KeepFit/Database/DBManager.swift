@@ -58,6 +58,31 @@ class DBManager {
 
     }
 
+    func updateSetsForTrainingExercise(exerciseName: String, trainingId: Int, set: GymSet) {
+
+        let training = getTrainingById(id: trainingId)
+        let result = training.exercises.filter("name contains '\(exerciseName)'")
+        if let exercise = result.first {
+            try! database.write {
+                exercise.sets.append(set)
+            }
+
+            try! database.write {
+                database.add(training, update: true)
+            }
+        }
+    }
+
+    func getExerciseForTraining(exerciseName: String, trainingId: Int) -> TrainingExercise? {
+        let training = getTrainingById(id: trainingId)
+        let result = training.exercises.filter("name contains '\(exerciseName)'")
+        if let exercise = result.first {
+            return exercise
+        }
+        return nil
+
+    }
+
     func getTrainingsFromDB() -> Results<Training> {
         let results: Results<Training> = database.objects(Training.self)
         return results
@@ -83,6 +108,8 @@ class DBManager {
     func incrementID() -> Int {
         return (database.objects(Training.self).max(ofProperty: "id") as Int? ?? 0) + 1
     }
+
+    
 
 
 }

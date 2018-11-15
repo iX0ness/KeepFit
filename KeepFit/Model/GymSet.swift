@@ -11,10 +11,8 @@ import RealmSwift
 
 class GymSet: Object {
 
-
     @objc dynamic var reps: Int = 0
     @objc dynamic var kilos: Double = 0
     @objc dynamic var time: String = ""
-    //var exercise = LinkingObjects(fromType: TrainingExercise.self, property: "sets")
 
 }

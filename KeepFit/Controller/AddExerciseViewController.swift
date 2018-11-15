@@ -13,6 +13,7 @@ class AddExerciseViewController: UIViewController,UITableViewDelegate, UITableVi
 
     private struct Constants {
         static let exrcisesListIdentifier = "exrcisesList"
+        static let setsListIdentifier = "setsList"
         static let cellIdentifier = "cell"
     }
 
@@ -21,6 +22,7 @@ class AddExerciseViewController: UIViewController,UITableViewDelegate, UITableVi
 
     var trainingId: Int!
     var training: Training!
+    var exerciseName: String!
 
 
 
@@ -54,6 +56,11 @@ class AddExerciseViewController: UIViewController,UITableViewDelegate, UITableVi
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        exerciseName = training.exercises[indexPath.row].name
+        performSegue(withIdentifier: Constants.setsListIdentifier, sender: self)
+    }
+
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -65,7 +72,6 @@ class AddExerciseViewController: UIViewController,UITableViewDelegate, UITableVi
             DBManager.sharedInstance.deleteObject(object: exercise)
             trainingExercisesTableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             trainingExercisesTableView.endUpdates()
-            
 
         }
     }
@@ -79,10 +85,18 @@ class AddExerciseViewController: UIViewController,UITableViewDelegate, UITableVi
             let destinationVC = segue.destination as! ExercisesListViewController
             destinationVC.trainingId = trainingId
         }
+
+        if segue.identifier == Constants.setsListIdentifier {
+            let destinationVC = segue.destination as! SetsListViewController
+            destinationVC.exerciseName = exerciseName
+            destinationVC.trainingId = trainingId
+        }
+
+        
     }
     
     func setupUI() {
-        
+
 
     }
 
