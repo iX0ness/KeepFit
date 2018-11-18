@@ -7,4 +7,5 @@ target 'KeepFit' do
 
   # Pods for KeepFit
     pod 'RealmSwift'
+    pod "BWWalkthrough"
 end

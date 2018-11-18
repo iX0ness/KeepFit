@@ -1,4 +1,5 @@
 PODS:
+  - BWWalkthrough (3.0.0)
   - Realm (3.11.1):
     - Realm/Headers (= 3.11.1)
   - Realm/Headers (3.11.1)
@@ -6,17 +7,20 @@ PODS:
     - Realm (= 3.11.1)
 
 DEPENDENCIES:
+  - BWWalkthrough
   - RealmSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - BWWalkthrough
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
+  BWWalkthrough: b86abce6aa2e4ce21e36a12a277fa6e89a5db075
   Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
 
-PODFILE CHECKSUM: 20dcef2c09dc1925ab5c1994efbbb9ccd927087e
+PODFILE CHECKSUM: 0ba1507a30a9db0d0c77e19738742d65c46eae6a
 
 COCOAPODS: 1.6.0.beta.2

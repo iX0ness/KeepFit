@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import BWWalkthrough
 
-class MenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class MenuViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, BWWalkthroughViewControllerDelegate {
 
     private struct Constants {
         static let menuCellIdentifier = "menuCell"
@@ -41,6 +42,18 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        let userDefaults = UserDefaults.standard
+
+        if !userDefaults.bool(forKey: "firstSignIn") {
+
+            showWalkthrough()
+
+            userDefaults.set(true, forKey: "firstSignIn")
+            userDefaults.synchronize()
+        }
+    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return menu.count
     }
@@ -66,6 +79,32 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         default:
             break
         }
+    }
+
+
+    func showWalkthrough() {
+
+        let storyboard = UIStoryboard(name: "Walkthrough", bundle: nil)
+        let walkthrough = storyboard.instantiateViewController(withIdentifier: "container") as! BWWalkthroughViewController
+        let page_one = storyboard.instantiateViewController(withIdentifier: "page_1")
+        let page_two = storyboard.instantiateViewController(withIdentifier: "page_2")
+
+        walkthrough.delegate = self
+        walkthrough.add(viewController:page_one)
+        walkthrough.add(viewController:page_two)
+
+
+
+        self.present(walkthrough, animated: true, completion: nil)
+
+    }
+
+    // MARK: - Walkthrough delegate -
+
+    
+
+    func walkthroughCloseButtonPressed() {
+        self.dismiss(animated: true, completion: nil)
     }
 
 }

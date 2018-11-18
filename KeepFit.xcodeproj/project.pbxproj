@@ -19,6 +19,7 @@
 		323A5ED221A067B1005E022B /* AnalyticsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323A5ED121A067B1005E022B /* AnalyticsListViewController.swift */; };
 		323A5ED421A06CE6005E022B /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323A5ED321A06CE6005E022B /* AnalyticsViewController.swift */; };
 		324B1131219B2BA0007CBB2A /* SetsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324B1130219B2BA0007CBB2A /* SetsListViewController.swift */; };
+		324BD1FB21A1ABEE00FE63FB /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324BD1FA21A1ABEE00FE63FB /* Walkthrough.storyboard */; };
 		325ACF012195B35C004D0754 /* GymSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ACF002195B35C004D0754 /* GymSet.swift */; };
 		325ACF032195B380004D0754 /* TrainingExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ACF022195B380004D0754 /* TrainingExercise.swift */; };
 		325ACF052195B3D7004D0754 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325ACF042195B3D7004D0754 /* Training.swift */; };
@@ -53,6 +54,7 @@
 		323A5ED121A067B1005E022B /* AnalyticsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsListViewController.swift; sourceTree = "<group>"; };
 		323A5ED321A06CE6005E022B /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
 		324B1130219B2BA0007CBB2A /* SetsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsListViewController.swift; sourceTree = "<group>"; };
+		324BD1FA21A1ABEE00FE63FB /* Walkthrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
 		325ACF002195B35C004D0754 /* GymSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymSet.swift; sourceTree = "<group>"; };
 		325ACF022195B380004D0754 /* TrainingExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingExercise.swift; sourceTree = "<group>"; };
 		325ACF042195B3D7004D0754 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				322C5CD02035DB3E00488612 /* Assets.xcassets */,
 				322C5CD22035DB3E00488612 /* LaunchScreen.storyboard */,
 				322C5CD52035DB3E00488612 /* Info.plist */,
+				324BD1FA21A1ABEE00FE63FB /* Walkthrough.storyboard */,
 			);
 			path = KeepFit;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				322C5CD42035DB3E00488612 /* LaunchScreen.storyboard in Resources */,
+				324BD1FB21A1ABEE00FE63FB /* Walkthrough.storyboard in Resources */,
 				322C5CD12035DB3E00488612 /* Assets.xcassets in Resources */,
 				322C5CCF2035DB3E00488612 /* Main.storyboard in Resources */,
 			);
@@ -291,6 +295,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KeepFit/Pods-KeepFit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BWWalkthrough/BWWalkthrough.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
@@ -298,6 +303,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BWWalkthrough.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
