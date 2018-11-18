@@ -55,8 +55,8 @@ class DBManager {
         try! database.write {
             database.add(training, update: true)
         }
-
     }
+
 
     func updateSetsForTrainingExercise(exerciseName: String, trainingId: Int, set: GymSet) {
 
@@ -99,6 +99,10 @@ class DBManager {
         return results
     }
 
+    func getBestResultsForExercise(exercise: TrainingExercise) {
+        
+    }
+
     func deleteObject(object: Object) {
         try? database.write {
             database.delete(object)
@@ -108,9 +112,6 @@ class DBManager {
     func incrementID() -> Int {
         return (database.objects(Training.self).max(ofProperty: "id") as Int? ?? 0) + 1
     }
-
-    
-
 
 }
 

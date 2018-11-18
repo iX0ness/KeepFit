@@ -59,21 +59,65 @@ class ExerciseProbeViewController: UIViewController {
         let dotProduct = Double(manipulator.getDotProduct())
         let cosAngle = dotProduct / (manipulator.vector1Abs * manipulator.vector2Abs)
 
-//        switch exerciseName {
-//        case "Thruster":
-//            
-//        default:
-//            <#code#>
-//        }
+        let result = probeResult(cosAngle: cosAngle, exerciseName: exerciseName)
+        print(cosAngle)
 
-        let alert = UIAlertController(title: "Photo Source", message: "Choose source", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Photo Source", message: "\(result)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        alert.message = "\(cosAngle)"
+
         self.present(alert, animated: true, completion: nil)
 
     }
 
 
+    func probeResult(cosAngle: Double, exerciseName: String) -> String{
 
+        switch exerciseName {
+        case "Thruster":
+            if cosAngle > -1 && cosAngle < -0.9962 {
+                return "OK"
+            } else {
+                return "chujnia"
+            }
+        case "Snatch":
+            if cosAngle > -1 && cosAngle < -0.9962 {
+                return "OK"
+            } else {
+                return "chujnia"
+            }
+        case "Ringdip":
+            if cosAngle > 0 && cosAngle < 0.9998 {
+                return "OK"
+
+            } else {
+                return "chujnia"
+            }
+        case "Burpee":
+            if cosAngle > 0.1736 && cosAngle < 0.9998 {
+                return "OK"
+            } else {
+                return "chujnia"
+            }
+
+        case "Push Up":
+            if cosAngle > 0 && cosAngle < 0.9998 {
+                return "OK"
+
+            } else {
+                return "chujnia"
+            }
+        case "Back Squat":
+            if cosAngle > 0 && cosAngle < 0.9998 {
+                return "OK"
+
+            } else {
+                return "chujnia"
+            }
+        default:
+            break
+        }
+
+        return "pizda"
+    }
 
 }

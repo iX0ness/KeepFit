@@ -15,9 +15,11 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         static let exerciseProbeIdentifier = "exerciseProbe"
         static let intervalTimerIdentifier = "intervalTimer"
         static let trainingHistoryIdentifier = "trainingHistory"
+        static let analyticsListIdentifier = "analyticsList"
         static let probeImage = "probe"
         static let timerImage = "timer"
         static let historyImage = "history"
+        static let analytics = "analytics"
     }
 
     var menu = [MenuItem]()
@@ -25,6 +27,7 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
     let exerciseProbe = MenuItem(image: UIImage(named: Constants.probeImage)!, name: "Probe")
     let intervalTimer = MenuItem(image: UIImage(named: Constants.timerImage)!, name: "Timer")
     let history = MenuItem(image: UIImage(named: Constants.historyImage)!, name: "History")
+    let analytics = MenuItem(image: UIImage(named: Constants.analytics)!, name: "Analytics")
 
 
 
@@ -34,7 +37,7 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         super.viewDidLoad()
         menuCollectionView.delegate = self
         menuCollectionView.dataSource = self
-        menu = [exerciseProbe, intervalTimer, history]
+        menu = [exerciseProbe, intervalTimer, history, analytics]
 
     }
 
@@ -58,12 +61,11 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
             performSegue(withIdentifier: Constants.intervalTimerIdentifier, sender: self)
         case 2:
             performSegue(withIdentifier: Constants.trainingHistoryIdentifier, sender: self)
+        case 3:
+            performSegue(withIdentifier: Constants.analyticsListIdentifier, sender: self)
         default:
             break
         }
     }
-
-
-    
 
 }

@@ -13,7 +13,7 @@ class TrainingExercise: Object {
 
     @objc dynamic var name: String = ""
     let sets = RealmSwift.List<GymSet>()
-    //var training = LinkingObjects(fromType: Training.self, property: "exercises")
+
 
 
     convenience init(name: String, gymSet: GymSet) {
@@ -22,7 +22,4 @@ class TrainingExercise: Object {
         self.sets.append(gymSet)
     }
 
-//    override class func primaryKey() -> String? {
-//        return "name"
-//    }
 }

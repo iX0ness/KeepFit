@@ -77,6 +77,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         if segue.identifier == Constants.probeIdentifier {
             let destinationVC = segue.destination as? ExerciseProbeViewController
             destinationVC?.probePhoto = excercisePhoto
+            destinationVC?.exerciseName = exerciseName
         }
     }
 }

@@ -80,6 +80,89 @@
             </objects>
             <point key="canvasLocation" x="1624.8" y="132.68365817091455"/>
         </scene>
+        <!--Analytics View Controller-->
+        <scene sceneID="L0O-eL-guV">
+            <objects>
+                <viewController id="pUZ-5H-vMa" customClass="AnalyticsViewController" customModule="KeepFit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4As-AM-XdO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6Dl-Wl-0Rh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iC5-9q-lWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="-1683"/>
+        </scene>
+        <!--Analytics List View Controller-->
+        <scene sceneID="tSy-Ba-gfS">
+            <objects>
+                <viewController id="hnG-Kr-HbY" customClass="AnalyticsListViewController" customModule="KeepFit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Kc-ug-Zbd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3KH-Ch-aFo">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="exerciseCell" rowHeight="116" id="m6i-TZ-pAj" customClass="ExerciseTableViewCell" customModule="KeepFit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="116"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m6i-TZ-pAj" id="dD1-dm-Dhh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hvI-59-bga">
+                                                    <rect key="frame" x="15" y="3" width="110" height="109.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="110" id="epf-Wd-hd9"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thruster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1au-xs-ks4">
+                                                    <rect key="frame" x="143" y="47.5" width="84" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hvI-59-bga" firstAttribute="leading" secondItem="dD1-dm-Dhh" secondAttribute="leading" constant="15" id="16R-J9-juO"/>
+                                                <constraint firstItem="hvI-59-bga" firstAttribute="top" secondItem="dD1-dm-Dhh" secondAttribute="top" constant="3" id="EFK-EA-2R9"/>
+                                                <constraint firstAttribute="bottom" secondItem="hvI-59-bga" secondAttribute="bottom" constant="3" id="NVB-Gg-Ami"/>
+                                                <constraint firstItem="1au-xs-ks4" firstAttribute="top" secondItem="hvI-59-bga" secondAttribute="bottom" constant="-65" id="OL9-Sm-5Jb"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1au-xs-ks4" secondAttribute="trailing" constant="20" symbolic="YES" id="ZaI-et-gND"/>
+                                                <constraint firstItem="1au-xs-ks4" firstAttribute="leading" secondItem="hvI-59-bga" secondAttribute="trailing" constant="18" id="x9C-HG-CSz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="exerciceImageView" destination="hvI-59-bga" id="ncL-T0-Gxa"/>
+                                            <outlet property="exerciseNameLabel" destination="1au-xs-ks4" id="L3G-1t-Tni"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xZq-RO-ML0" firstAttribute="bottom" secondItem="3KH-Ch-aFo" secondAttribute="bottom" id="1Bv-cH-ue8"/>
+                            <constraint firstItem="3KH-Ch-aFo" firstAttribute="top" secondItem="xZq-RO-ML0" secondAttribute="top" id="Gsj-7H-6Vp"/>
+                            <constraint firstItem="3KH-Ch-aFo" firstAttribute="leading" secondItem="xZq-RO-ML0" secondAttribute="leading" id="NKJ-yU-kyJ"/>
+                            <constraint firstItem="xZq-RO-ML0" firstAttribute="trailing" secondItem="3KH-Ch-aFo" secondAttribute="trailing" id="vdT-dh-LVT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xZq-RO-ML0"/>
+                    </view>
+                    <connections>
+                        <outlet property="analyticsTableView" destination="3KH-Ch-aFo" id="3ob-wu-jeC"/>
+                        <segue destination="pUZ-5H-vMa" kind="show" identifier="analytics" id="673-Z2-VjD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r3g-oe-pu9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="-884"/>
+        </scene>
         <!--Training history-->
         <scene sceneID="vYG-hg-HJ1">
             <objects>
@@ -520,6 +603,7 @@
                         <segue destination="BYZ-38-t0r" kind="show" identifier="exerciseProbe" id="6wu-EJ-DsS"/>
                         <segue destination="oE4-tm-QaA" kind="show" identifier="intervalTimer" id="N96-W0-gKj"/>
                         <segue destination="Lsi-Eb-YIk" kind="show" identifier="trainingHistory" id="uU1-k3-FpF"/>
+                        <segue destination="hnG-Kr-HbY" kind="show" identifier="analyticsList" id="zAh-Ou-fWJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAu-1p-jLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
