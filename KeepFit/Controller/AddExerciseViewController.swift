@@ -34,7 +34,7 @@ class AddExerciseViewController: UIViewController,UITableViewDelegate, UITableVi
         training = DBManager.sharedInstance.getTrainingById(id: trainingId)
         trainingExercisesTableView.delegate = self
         trainingExercisesTableView.dataSource = self
-        print(training.id)
+        
 
         
     }

@@ -24,6 +24,7 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
 
     var menu = [MenuItem]()
+    var walkthrough: BWWalkthroughViewController!
     
     let exerciseProbe = MenuItem(image: UIImage(named: Constants.probeImage)!, name: "Probe")
     let intervalTimer = MenuItem(image: UIImage(named: Constants.timerImage)!, name: "Timer")
@@ -93,15 +94,11 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         walkthrough.add(viewController:page_one)
         walkthrough.add(viewController:page_two)
 
-
-
         self.present(walkthrough, animated: true, completion: nil)
 
     }
 
     // MARK: - Walkthrough delegate -
-
-    
 
     func walkthroughCloseButtonPressed() {
         self.dismiss(animated: true, completion: nil)
