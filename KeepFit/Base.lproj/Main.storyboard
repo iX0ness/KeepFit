@@ -30,31 +30,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yi4-b2-rGT">
-                                                    <rect key="frame" x="15" y="3" width="110" height="109.5"/>
+                                                    <rect key="frame" x="132.5" y="3" width="110" height="110"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="110" id="0LB-L7-hVg"/>
                                                         <constraint firstAttribute="width" constant="110" id="vXt-J5-Hg7"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thruster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgI-UH-a0e">
-                                                    <rect key="frame" x="143" y="47.5" width="84" height="27.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Yi4-b2-rGT" secondAttribute="bottom" constant="3" id="Dr0-xK-mc8"/>
-                                                <constraint firstItem="Yi4-b2-rGT" firstAttribute="leading" secondItem="1DC-De-DAQ" secondAttribute="leading" constant="15" id="Min-Um-nXS"/>
-                                                <constraint firstItem="HgI-UH-a0e" firstAttribute="top" secondItem="Yi4-b2-rGT" secondAttribute="bottom" constant="-65" id="SjQ-m7-PLd"/>
-                                                <constraint firstItem="HgI-UH-a0e" firstAttribute="leading" secondItem="Yi4-b2-rGT" secondAttribute="trailing" constant="18" id="vNF-0V-k7N"/>
-                                                <constraint firstItem="Yi4-b2-rGT" firstAttribute="top" secondItem="1DC-De-DAQ" secondAttribute="top" constant="3" id="xft-cA-gSV"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HgI-UH-a0e" secondAttribute="trailing" constant="20" symbolic="YES" id="yTl-VB-dwS"/>
+                                                <constraint firstItem="Yi4-b2-rGT" firstAttribute="centerY" secondItem="1DC-De-DAQ" secondAttribute="centerY" id="7Ya-w0-etH"/>
+                                                <constraint firstItem="Yi4-b2-rGT" firstAttribute="centerX" secondItem="1DC-De-DAQ" secondAttribute="centerX" id="uMO-9P-Ke6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="exerciceImageView" destination="Yi4-b2-rGT" id="2Ai-xR-upi"/>
-                                            <outlet property="exerciseNameLabel" destination="HgI-UH-a0e" id="cgc-i6-P74"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -87,9 +77,24 @@
                     <view key="view" contentMode="scaleToFill" id="4As-AM-XdO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnX-Gn-yjo" customClass="Chart" customModule="SwiftChart">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Dl-Wl-0Rh" firstAttribute="trailing" secondItem="vnX-Gn-yjo" secondAttribute="trailing" id="5R5-pE-Tzl"/>
+                            <constraint firstItem="vnX-Gn-yjo" firstAttribute="top" secondItem="6Dl-Wl-0Rh" secondAttribute="top" id="FVi-a0-Tzq"/>
+                            <constraint firstItem="6Dl-Wl-0Rh" firstAttribute="bottom" secondItem="vnX-Gn-yjo" secondAttribute="bottom" id="HQM-fo-lwi"/>
+                            <constraint firstItem="vnX-Gn-yjo" firstAttribute="leading" secondItem="6Dl-Wl-0Rh" secondAttribute="leading" id="i4H-uE-dkG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Dl-Wl-0Rh"/>
                     </view>
+                    <connections>
+                        <outlet property="chart" destination="vnX-Gn-yjo" id="wDX-fM-wXM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iC5-9q-lWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,31 +120,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hvI-59-bga">
-                                                    <rect key="frame" x="15" y="3" width="110" height="109.5"/>
+                                                    <rect key="frame" x="132.5" y="3" width="110" height="110"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="110" id="Me1-5s-gRL"/>
                                                         <constraint firstAttribute="width" constant="110" id="epf-Wd-hd9"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thruster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1au-xs-ks4">
-                                                    <rect key="frame" x="143" y="47.5" width="84" height="27.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hvI-59-bga" firstAttribute="leading" secondItem="dD1-dm-Dhh" secondAttribute="leading" constant="15" id="16R-J9-juO"/>
-                                                <constraint firstItem="hvI-59-bga" firstAttribute="top" secondItem="dD1-dm-Dhh" secondAttribute="top" constant="3" id="EFK-EA-2R9"/>
-                                                <constraint firstAttribute="bottom" secondItem="hvI-59-bga" secondAttribute="bottom" constant="3" id="NVB-Gg-Ami"/>
-                                                <constraint firstItem="1au-xs-ks4" firstAttribute="top" secondItem="hvI-59-bga" secondAttribute="bottom" constant="-65" id="OL9-Sm-5Jb"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1au-xs-ks4" secondAttribute="trailing" constant="20" symbolic="YES" id="ZaI-et-gND"/>
-                                                <constraint firstItem="1au-xs-ks4" firstAttribute="leading" secondItem="hvI-59-bga" secondAttribute="trailing" constant="18" id="x9C-HG-CSz"/>
+                                                <constraint firstItem="hvI-59-bga" firstAttribute="centerY" secondItem="dD1-dm-Dhh" secondAttribute="centerY" id="1v4-qU-jiW"/>
+                                                <constraint firstItem="hvI-59-bga" firstAttribute="centerX" secondItem="dD1-dm-Dhh" secondAttribute="centerX" id="Aez-o6-YJ5"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="exerciceImageView" destination="hvI-59-bga" id="ncL-T0-Gxa"/>
-                                            <outlet property="exerciseNameLabel" destination="1au-xs-ks4" id="L3G-1t-Tni"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -277,39 +272,29 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <prototypes>
-                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="exerciseCell2" rowHeight="116" id="6Cl-3t-lAN" customClass="ExerciseTableViewCell" customModule="KeepFit" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="28" width="375" height="116"/>
+                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="exerciseCell2" rowHeight="127" id="6Cl-3t-lAN" customClass="ExerciseTableViewCell" customModule="KeepFit" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="28" width="375" height="127"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Cl-3t-lAN" id="y5c-Q6-0Jk">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="115.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="126.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yMK-38-FtT">
-                                                        <rect key="frame" x="15" y="3" width="110" height="109.5"/>
+                                                        <rect key="frame" x="132.5" y="8.5" width="110" height="110"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="height" constant="110" id="NgK-IM-bGh"/>
                                                             <constraint firstAttribute="width" constant="110" id="d1m-vr-lPN"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thruster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txa-Mu-hhg">
-                                                        <rect key="frame" x="143" y="47.5" width="84" height="27.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="yMK-38-FtT" secondAttribute="bottom" constant="3" id="Bbi-wc-8B5"/>
-                                                    <constraint firstItem="Txa-Mu-hhg" firstAttribute="top" secondItem="yMK-38-FtT" secondAttribute="bottom" constant="-65" id="Ygg-As-aD1"/>
-                                                    <constraint firstItem="yMK-38-FtT" firstAttribute="leading" secondItem="y5c-Q6-0Jk" secondAttribute="leading" constant="15" id="b56-72-N4F"/>
-                                                    <constraint firstItem="Txa-Mu-hhg" firstAttribute="leading" secondItem="yMK-38-FtT" secondAttribute="trailing" constant="18" id="mch-4f-xy5"/>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Txa-Mu-hhg" secondAttribute="trailing" constant="20" symbolic="YES" id="tXz-I6-yUy"/>
-                                                    <constraint firstItem="yMK-38-FtT" firstAttribute="top" secondItem="y5c-Q6-0Jk" secondAttribute="top" constant="3" id="vQ8-FU-Rvo"/>
+                                                    <constraint firstItem="yMK-38-FtT" firstAttribute="centerX" secondItem="y5c-Q6-0Jk" secondAttribute="centerX" id="LTA-3L-IQF"/>
+                                                    <constraint firstItem="yMK-38-FtT" firstAttribute="centerY" secondItem="y5c-Q6-0Jk" secondAttribute="centerY" id="LbJ-7F-ASM"/>
                                                 </constraints>
                                             </tableViewCellContentView>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <outlet property="exerciceImageView" destination="yMK-38-FtT" id="Fv0-zD-cyo"/>
-                                                <outlet property="exerciseNameLabel" destination="Txa-Mu-hhg" id="ju6-73-ael"/>
                                             </connections>
                                         </tableViewCell>
                                     </prototypes>
@@ -331,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zif-YV-cJ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3614" y="-884"/>
+            <point key="canvasLocation" x="3613.5999999999999" y="-884.70764617691157"/>
         </scene>
         <!--Sets-->
         <scene sceneID="OGt-Jg-FcH">

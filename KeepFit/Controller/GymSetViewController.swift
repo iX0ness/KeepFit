@@ -93,13 +93,13 @@ class GymSetViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         guard let date = date else {return nil}
 
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hhmmss"
+        dateFormatter.dateFormat = "HHMMSS"
         guard let _date = dateFormatter.date(from: date) else {
             return nil
         }
 
         let newDateFormatter = DateFormatter()
-        newDateFormatter.dateFormat = "hh:mm:ss"
+        newDateFormatter.dateFormat = "HH:MM:SS"
         let newDate = newDateFormatter.string(from: _date)
 
         return newDate

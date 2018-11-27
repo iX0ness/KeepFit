@@ -24,7 +24,7 @@ class ExerciseTableViewCell: UITableViewCell {
     }
 
     func configure(with exercise: Exercise) {
-        exerciseNameLabel.text = exercise.name
+        
         if let _url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             let path = _url.appendingPathComponent(exercise.imagePath)
             do {

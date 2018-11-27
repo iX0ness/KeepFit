@@ -288,67 +288,6 @@ class DBManager {
             return 0.0
         }
 
-
-
-
-//        if trainings.count > 0 {
-//            for training in trainings {
-//                for exercise in training.exercises {
-//                    if exercise.name == exerciseName {
-//                        exercisesToAdd.append(exercise)
-//                    }
-//                }
-//            }
-//
-//            if exerciseName == Constants.snatch || exerciseName == Constants.thruster {
-//                for exercise in exercisesToAdd {
-//
-//                    if exercise.sets.count > 0 {
-//                        for set in exercise.sets {
-//                            kilosToAdd.append(set.kilos)
-//                        }
-//                    } else {
-//                        print("Exercise has no sets")
-//                        kilosToAdd.append(0.0)
-//                    }
-//
-//                }
-//            } else if exerciseName == Constants.burpee || exerciseName == Constants.ringdip {
-//                for exercise in exercisesToAdd {
-//                    if exercise.sets.count > 0 {
-//                        for set in exercise.sets {
-//                            repsToAdd.append(set.reps)
-//                        }
-//                    } else {
-//                        print("Exercise has no sets")
-//                        repsToAdd.append(0)
-//                    }
-//                }
-//            } else {
-//                print("zalupa")
-//            }
-//
-//
-//            if kilosToAdd.isEmpty {
-//                return Double(repsToAdd.max()!)
-//            }
-//
-//            return kilosToAdd.max()!
-//
-//
-//
-//        } else {
-//
-//
-//
-//            print("No trainings")
-//            return 0.0
-//
-//        }
-
-
-
-
     }
 
 }

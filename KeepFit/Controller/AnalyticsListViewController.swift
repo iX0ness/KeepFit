@@ -33,6 +33,10 @@ class AnalyticsListViewController: UIViewController, UITableViewDelegate, UITabl
         return exercises.count
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = analyticsTableView.dequeueReusableCell(withIdentifier: Constants.exerciseCellIdentifier, for: indexPath) as! ExerciseTableViewCell
         cell.configure(with: exercises[indexPath.row])

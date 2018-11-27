@@ -36,9 +36,8 @@
                                 <rect key="frame" x="168" y="557" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Tt-kz-R93">
-                                <rect key="frame" x="265" y="111" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Tt-kz-R93">
+                                <rect key="frame" x="312" y="20" width="48" height="30"/>
                                 <state key="normal" title="CLOSE"/>
                                 <connections>
                                     <action selector="close:" destination="ybO-Ig-bET" eventType="touchUpInside" id="BGV-TS-ybw"/>
@@ -50,7 +49,9 @@
                             <constraint firstItem="xuB-Le-dF0" firstAttribute="bottom" secondItem="sA8-fD-tLD" secondAttribute="bottom" constant="20" id="742-fH-6o6"/>
                             <constraint firstItem="xuB-Le-dF0" firstAttribute="bottom" secondItem="PvE-pz-qHD" secondAttribute="bottom" constant="20" id="I4H-2a-XH9"/>
                             <constraint firstItem="sA8-fD-tLD" firstAttribute="leading" secondItem="xuB-Le-dF0" secondAttribute="leading" constant="15" id="Pps-79-YIc"/>
+                            <constraint firstItem="xuB-Le-dF0" firstAttribute="trailing" secondItem="9Tt-kz-R93" secondAttribute="trailing" constant="15" id="Vep-5L-Lhg"/>
                             <constraint firstItem="xuB-Le-dF0" firstAttribute="trailing" secondItem="PvE-pz-qHD" secondAttribute="trailing" constant="15" id="aww-zp-yft"/>
+                            <constraint firstItem="9Tt-kz-R93" firstAttribute="top" secondItem="xuB-Le-dF0" secondAttribute="top" id="pge-7R-6fT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xuB-Le-dF0"/>
                     </view>

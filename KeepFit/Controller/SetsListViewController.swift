@@ -50,7 +50,7 @@ class SetsListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell = setsListTableView.dequeueReusableCell(withIdentifier: Constants.setCellIdentifier, for: indexPath) as! SetTableViewCell
-        cell.configureCell(with: exercise.sets[indexPath.row])
+        cell.configureCell(with: exercise.sets[indexPath.row], exerciseName: exerciseName)
         
         return cell
     }
@@ -88,6 +88,7 @@ class SetsListViewController: UIViewController, UITableViewDelegate, UITableView
         if segue.identifier == Constants.addSetIdentifier {
             let destinationVC = segue.destination as! GymSetViewController
             destinationVC.delegate = self
+            destinationVC.exerciseName = exerciseName
         }
     }
 

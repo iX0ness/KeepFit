@@ -5,22 +5,26 @@ PODS:
   - Realm/Headers (3.11.1)
   - RealmSwift (3.11.1):
     - Realm (= 3.11.1)
+  - SwiftChart (1.0.1)
 
 DEPENDENCIES:
   - BWWalkthrough
   - RealmSwift
+  - SwiftChart
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BWWalkthrough
     - Realm
     - RealmSwift
+    - SwiftChart
 
 SPEC CHECKSUMS:
   BWWalkthrough: b86abce6aa2e4ce21e36a12a277fa6e89a5db075
   Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
+  SwiftChart: ba767a678d568a5ee22d419e146a0582865e1aff
 
-PODFILE CHECKSUM: 0ba1507a30a9db0d0c77e19738742d65c46eae6a
+PODFILE CHECKSUM: 5b4deef6ecde57096eaf168eefc1b1d01e49ea8c
 
 COCOAPODS: 1.6.0.beta.2

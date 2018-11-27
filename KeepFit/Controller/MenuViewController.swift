@@ -40,14 +40,14 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         menuCollectionView.delegate = self
         menuCollectionView.dataSource = self
         menu = [exerciseProbe, intervalTimer, history, analytics]
-        
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
         let userDefaults = UserDefaults.standard
 
         if !userDefaults.bool(forKey: "firstSignIn") {
-
+            
             showWalkthrough()
 
             userDefaults.set(true, forKey: "firstSignIn")

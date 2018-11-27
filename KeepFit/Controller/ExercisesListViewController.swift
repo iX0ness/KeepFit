@@ -31,12 +31,12 @@ class ExercisesListViewController: UIViewController, UITableViewDelegate, UITabl
         // Do any additional setup after loading the view.
     }
 
-//    override func viewDidAppear(_ animated: Bool) {
-//        exercisesTableView.reloadData()
-//    }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return exercises.count
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

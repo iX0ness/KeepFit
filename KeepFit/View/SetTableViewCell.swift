@@ -27,10 +27,16 @@ class SetTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    func configureCell(with set: GymSet) {
+    func configureCell(with set: GymSet, exerciseName: String) {
+
         repsValueLabel.text = String(set.reps)
         timeValueLabel.text = String(set.time)
         weightValueLabel.text = String(set.kilos)
+
+        if exerciseName == "Thruster" {
+            timeLabel.isHidden = true
+            timeValueLabel.isHidden = true
+        }
     }
 
 }
