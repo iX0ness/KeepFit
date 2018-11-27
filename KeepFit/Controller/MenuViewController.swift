@@ -40,7 +40,7 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         menuCollectionView.delegate = self
         menuCollectionView.dataSource = self
         menu = [exerciseProbe, intervalTimer, history, analytics]
-
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
