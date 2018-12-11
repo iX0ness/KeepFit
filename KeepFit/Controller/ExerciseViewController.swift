@@ -20,7 +20,9 @@ class ExerciseViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     @IBOutlet weak var exerciseTableView: UITableView!
-
+    @IBOutlet weak var navItem: UINavigationItem!
+    
+    
     var exercises: Results<Exercise>!
     var selectedExercise: Exercise?
 
@@ -30,6 +32,10 @@ class ExerciseViewController: UIViewController, UITableViewDelegate, UITableView
         self.exercises = DBManager.sharedInstance.getExercisesFromDB()
         self.exerciseTableView.delegate = self
         self.exerciseTableView.dataSource = self
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        setupUI()
     }
 
     // MARK: -  Delegate and DataSource methods
@@ -60,13 +66,16 @@ class ExerciseViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
 
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor(displayP3Red: 0.898, green: 0.1059, blue: 0.1059, alpha: 0.8)
+
+    }
+
     func setupUI() {
-//        exerciseTableView.backgroundView = UIImageView(image: UIImage(named: Constants.backgoundImage))
-//        exerciseTableView.contentMode = .scaleToFill
-//        exerciseTableView.contentInset = UIEdgeInsetsMake(40, 0, 0, 0)
-//        navigationController?.navigationBar.barStyle = .default
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage(named: Constants.shadowImage)
+        navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 0.898, green: 0.1059, blue: 0.1059, alpha: 0.4)
+        navigationController?.navigationBar.tintColor = UIColor(displayP3Red: 0, green: 0.9804, blue: 0.5725, alpha: 1.0)
+        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor(displayP3Red: 0, green: 0.9804, blue: 0.5725, alpha: 1.0)]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
 
     }
 

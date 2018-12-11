@@ -18,6 +18,7 @@ class ExerciseProbeViewController: UIViewController {
     var exerciseName: String!
     @IBOutlet weak var probeImageView: UIImageView!
     
+    @IBOutlet weak var checkMeButton: UIButton!
     @IBOutlet weak var firstPoint: UIImageView!
     @IBOutlet weak var secondPoint: UIImageView!
     @IBOutlet weak var thirdPoint: UIImageView!
@@ -26,6 +27,10 @@ class ExerciseProbeViewController: UIViewController {
         super.viewDidLoad()
         probeImageView.image = probePhoto
 
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        setupUI()
     }
 
 
@@ -120,6 +125,11 @@ class ExerciseProbeViewController: UIViewController {
         }
 
         return ""
+    }
+
+    func setupUI() {
+        self.view.backgroundColor = UIColor(displayP3Red: 0.8745, green: 0.0, blue: 0.0706, alpha: 1)
+        
     }
 
 }

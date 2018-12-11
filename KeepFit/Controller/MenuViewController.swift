@@ -40,8 +40,10 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         menuCollectionView.delegate = self
         menuCollectionView.dataSource = self
         menu = [exerciseProbe, intervalTimer, history, analytics]
-        setupUI()
+    }
 
+    override func viewWillAppear(_ animated: Bool) {
+        setupUI()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -112,6 +114,8 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         backgoundImageView.contentMode = .scaleToFill
         backgoundImageView.alpha = 0.5
         menuCollectionView.backgroundView = backgoundImageView
+        navigationController?.navigationBar.barTintColor = UIColor.white
+        
     }
 
 }
