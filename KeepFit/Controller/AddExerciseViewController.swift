@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class AddExerciseViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class AddExerciseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     private struct Constants {
         static let exrcisesListIdentifier = "exrcisesList"

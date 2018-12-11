@@ -22,10 +22,10 @@ class TrainingHistoryViewController: UIViewController, UITableViewDelegate, UITa
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         trainings = DBManager.sharedInstance.getTrainingsFromDB()
         trainingHistoryTableView.delegate = self
         trainingHistoryTableView.dataSource = self
-        
 
     }
 

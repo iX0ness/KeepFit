@@ -14,13 +14,13 @@ class ExerciseTableViewCell: UITableViewCell {
     @IBOutlet weak var exerciseNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupUI()
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        
     }
 
     func configure(with exercise: Exercise) {
@@ -31,9 +31,23 @@ class ExerciseTableViewCell: UITableViewCell {
                 let data = try Data(contentsOf: path)
                 exerciceImageView.image = UIImage(data: data)
             }catch {
-                fatalError("SHLYAPA")
+                fatalError("Error")
             }
         }
     }
 
+    func setupUI(){
+        let backgroundImage = UIImage(named: "menuVCBg")
+        let backgoundImageView = UIImageView(image: backgroundImage)
+        backgoundImageView.contentMode = .scaleToFill
+        self.backgroundView = backgoundImageView
+
+
+//        backgoundImageView.image = backgroundImage
+//        backgoundImageView.contentMode = .scaleToFill
+//        backgoundImageView.alpha = 0.5
+//        menuCollectionView.backgroundView = backgoundImageView
+    }
+
 }
+

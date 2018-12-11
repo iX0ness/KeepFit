@@ -14,11 +14,9 @@ class Training: Object {
     @objc dynamic var id = 0
     @objc dynamic var date = NSDate()
     var exercises = RealmSwift.List<TrainingExercise>()
-    //var exercises = List<TrainingExercise>()
 
     convenience init(date: NSDate, exercise: TrainingExercise) {
         self.init()
-        //self.date = date
         self.exercises.append(exercise)
     }
 

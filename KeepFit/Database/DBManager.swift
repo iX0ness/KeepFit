@@ -9,20 +9,45 @@
 import Foundation
 import RealmSwift
 
+//let thruster = Exercise(name: "Thruster", imagePath: UIImage(named: "thruster")?.saveInLocalStorage(imageName: "Thruster") ?? "")
+//let snatch = Exercise(name: "Snatch", imagePath: UIImage(named: "snatch")?.saveInLocalStorage(imageName: "Snatch") ?? "")
+//let ringdip = Exercise(name: "Ringdip", imagePath: UIImage(named: "ringdip")?.saveInLocalStorage(imageName: "Ringdip") ?? "")
+//let burpee = Exercise(name: "Burpee", imagePath: UIImage(named: "burpee")?.saveInLocalStorage(imageName: "Burpee") ?? "")
+//let running = Exercise(name: "Running", imagePath: UIImage(named: "running")?.saveInLocalStorage(imageName: "Running") ?? "")
+//let backsquat = Exercise(name: "Back Squat", imagePath: UIImage(named: "backsquat")?.saveInLocalStorage(imageName: "BackSquat") ?? "")
+//let frontsquat = Exercise(name: "Front Squat", imagePath: UIImage(named: "frontsquat")?.saveInLocalStorage(imageName: "FrontSquat") ?? "")
+//let cleanjerk = Exercise(name: "Clean&Jerk", imagePath: UIImage(named: "cleanjerk")?.saveInLocalStorage(imageName: "CleanJerk") ?? "")
+//let clean = Exercise(name: "Clean", imagePath: UIImage(named: "clean")?.saveInLocalStorage(imageName: "Clean") ?? "")
+//let pushPress = Exercise(name: "Push Press", imagePath: UIImage(named: "pushpress")?.saveInLocalStorage(imageName: "PushPress") ?? "")
+//let jerk = Exercise(name: "Jerk", imagePath: UIImage(named: "jerk")?.saveInLocalStorage(imageName: "Jerk") ?? "")
+//let pushUp = Exercise(name: "Push Up", imagePath: UIImage(named: "pushup")?.saveInLocalStorage(imageName: "PushUp") ?? "")
+//let pullUp = Exercise(name: "Pull Up", imagePath: UIImage(named: "pullup")?.saveInLocalStorage(imageName: "PullUp") ?? "")
+//let muscleUP = Exercise(name: "Muscle Up", imagePath: UIImage(named: "muscleup")?.saveInLocalStorage(imageName: "MuscleUp") ?? "")
+//let benchPress = Exercise(name: "Bench Press", imagePath: UIImage(named: "benchpress")?.saveInLocalStorage(imageName: "BenchPress") ?? "")
+
 class DBManager {
 
     private struct Constants {
         static let thruster = "Thruster"
-        static let ringdip = "Ringdip"
         static let snatch = "Snatch"
-        static let running = "Running"
+        static let ringdip = "Ringdip"
         static let burpee = "Burpee"
+        static let running = "Running"
+        static let backsquat = "Backsquat"
+        static let frontsquat = "Frontsquat"
+        static let cleanjerk = "Clean&Jerk"
+        static let clean = "Clean"
+        static let pushPress = "PushPress"
+        static let jerk = "Jerk"
+        static let pushUp = "PushUp"
+        static let pullUp = "PullUp"
+        static let muscleUP = "MuscleUp"
+        static let benchPress = "BenchPress"
+
     }
 
     private var database: Realm
     static let sharedInstance = DBManager()
-
-
 
     private init() {
         database = try! Realm()
@@ -66,7 +91,7 @@ class DBManager {
     }
 
 
-    func updateSetsForTrainingExercise(exerciseName: String, trainingId: Int, set: GymSet) {
+    func addSetsForTrainingExercise(exerciseName: String, trainingId: Int, set: GymSet) {
 
         let training = getTrainingById(id: trainingId)
         let result = training.exercises.filter("name contains '\(exerciseName)'")
@@ -209,8 +234,6 @@ class DBManager {
 
         let resultsArray = [january, february, march, april, may, june, july, august, september, october, november, december]
 
-        
-        
         return resultsArray
     }
 

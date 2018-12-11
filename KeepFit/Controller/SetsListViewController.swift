@@ -28,6 +28,7 @@ class SetsListViewController: UIViewController, UITableViewDelegate, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setsListTableView.delegate = self
         setsListTableView.dataSource = self
 
@@ -37,10 +38,7 @@ class SetsListViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     override func viewWillAppear(_ animated: Bool) {
-
-
         setsListTableView.reloadData()
-
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,7 +79,7 @@ class SetsListViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func passData(gymSet: GymSet) {
-        DBManager.sharedInstance.updateSetsForTrainingExercise(exerciseName: exerciseName, trainingId: trainingId, set: gymSet)        
+        DBManager.sharedInstance.addSetsForTrainingExercise(exerciseName: exerciseName, trainingId: trainingId, set: gymSet)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

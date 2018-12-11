@@ -9,18 +9,13 @@
 import UIKit
 
 class SetTableViewCell: UITableViewCell {
+
     @IBOutlet weak var repsLabel: UILabel!
-
     @IBOutlet weak var timeLabel: UILabel!
-
     @IBOutlet weak var weightLabel: UILabel!
-
     @IBOutlet weak var repsValueLabel: UILabel!
-
     @IBOutlet weak var timeValueLabel: UILabel!
-    
     @IBOutlet weak var weightValueLabel: UILabel!
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,7 +23,6 @@ class SetTableViewCell: UITableViewCell {
     }
 
     func configureCell(with set: GymSet, exerciseName: String) {
-
         repsValueLabel.text = String(set.reps)
         timeValueLabel.text = String(set.time)
         weightValueLabel.text = String(set.kilos)

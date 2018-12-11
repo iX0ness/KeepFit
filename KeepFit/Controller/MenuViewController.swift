@@ -17,7 +17,7 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         static let intervalTimerIdentifier = "intervalTimer"
         static let trainingHistoryIdentifier = "trainingHistory"
         static let analyticsListIdentifier = "analyticsList"
-        static let probeImage = "probe"
+        static let probeImage = "check"
         static let timerImage = "timer"
         static let historyImage = "history"
         static let analytics = "analytics"
@@ -40,6 +40,7 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         menuCollectionView.delegate = self
         menuCollectionView.dataSource = self
         menu = [exerciseProbe, intervalTimer, history, analytics]
+        setupUI()
 
     }
 
@@ -104,4 +105,15 @@ class MenuViewController: UIViewController, UICollectionViewDelegate, UICollecti
         self.dismiss(animated: true, completion: nil)
     }
 
+    func setupUI() {
+        let backgroundImage = UIImage(named: "menuVCBg")
+        let backgoundImageView = UIImageView(image: backgroundImage)
+        backgoundImageView.image = backgroundImage
+        backgoundImageView.contentMode = .scaleToFill
+        backgoundImageView.alpha = 0.5
+        menuCollectionView.backgroundView = backgoundImageView
+    }
+
 }
+
+

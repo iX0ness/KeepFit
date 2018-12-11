@@ -62,7 +62,7 @@ class ExerciseProbeViewController: UIViewController {
         let result = probeResult(cosAngle: cosAngle, exerciseName: exerciseName)
         print(cosAngle)
 
-        let alert = UIAlertController(title: "Photo Source", message: "\(result)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Result", message: "\(result)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
 
         self.present(alert, animated: true, completion: nil)
@@ -73,30 +73,32 @@ class ExerciseProbeViewController: UIViewController {
     func probeResult(cosAngle: Double, exerciseName: String) -> String{
 
         switch exerciseName {
-        case "Thruster":
-            if cosAngle > -1 && cosAngle < -0.9962 {
-                return "OK"
-            } else {
-                return "chujnia"
-            }
+
         case "Snatch":
             if cosAngle > -1 && cosAngle < -0.9962 {
                 return "OK"
             } else {
-                return "chujnia"
+                return "WRONG"
+            }
+
+        case "Thruster":
+            if cosAngle > -1 && cosAngle < -0.9962 {
+                return "OK"
+            } else {
+                return "WRONG"
             }
         case "Ringdip":
             if cosAngle > 0 && cosAngle < 0.9998 {
                 return "OK"
 
             } else {
-                return "chujnia"
+                return "WRONG"
             }
         case "Burpee":
             if cosAngle > 0.1736 && cosAngle < 0.9998 {
                 return "OK"
             } else {
-                return "chujnia"
+                return "WRONG"
             }
 
         case "Push Up":
@@ -104,20 +106,20 @@ class ExerciseProbeViewController: UIViewController {
                 return "OK"
 
             } else {
-                return "chujnia"
+                return "WRONG"
             }
         case "Back Squat":
             if cosAngle > 0 && cosAngle < 0.9998 {
                 return "OK"
 
             } else {
-                return "chujnia"
+                return "WRONG"
             }
         default:
             break
         }
 
-        return "pizda"
+        return ""
     }
 
 }

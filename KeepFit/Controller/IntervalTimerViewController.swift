@@ -11,11 +11,11 @@ import UIKit
 class IntervalTimerViewController: UIViewController {
 
     //OUTLETS
-    @IBOutlet weak var startButton: UIButton!
 
+
+    @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
-
     @IBOutlet weak var setsLabel: UILabel!
 
 
@@ -23,7 +23,6 @@ class IntervalTimerViewController: UIViewController {
     var sets = 0
     var secondsTmp = 0
     var timer = Timer()
-
     var isTimerRunning = false
     var resumeTapped = false
 
@@ -31,6 +30,7 @@ class IntervalTimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         pauseButton.isEnabled = false
+        setupUI()
     }
 
     @IBAction func increaseValue(_ sender: UIButton) {
@@ -40,19 +40,30 @@ class IntervalTimerViewController: UIViewController {
             setsLabel.text = "\(sets)"
 
         case 2:
-
             seconds+=1
             secondsTmp+=1
             timeLabel.text = timeToString(time: TimeInterval(seconds))
-
 
         default:
             break
         }
 
     }
-    @IBAction func decreaseValue(_ sender: UIButton) {
 
+    @IBAction func decreaseValue(_ sender: UIButton) {
+        switch sender.tag {
+        case 1:
+            sets-=1
+            setsLabel.text = "\(sets)"
+
+        case 2:
+            seconds-=1
+            secondsTmp-=1
+            timeLabel.text = timeToString(time: TimeInterval(seconds))
+
+        default:
+            break
+        }
 
     }
 
@@ -62,6 +73,7 @@ class IntervalTimerViewController: UIViewController {
             self.startButton.isEnabled = false
         }
     }
+
     @IBAction func pauseButtonTapped(_ sender: UIButton) {
         if self.resumeTapped == false {
             timer.invalidate()
@@ -87,6 +99,7 @@ class IntervalTimerViewController: UIViewController {
         pauseButton.isEnabled = false
         startButton.isEnabled = true
     }
+
     func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(IntervalTimerViewController.updateTimer)), userInfo: nil, repeats: true)
         isTimerRunning = true
@@ -104,14 +117,10 @@ class IntervalTimerViewController: UIViewController {
                 seconds = secondsTmp
                 timeLabel.text = timeToString(time: TimeInterval(seconds))
             } else {
-
                 seconds -= 1
                 timeLabel.text = timeToString(time: TimeInterval(seconds))
-
-
             }
         }
-
     }
 
     func timeToString(time: TimeInterval) -> String{
@@ -121,6 +130,14 @@ class IntervalTimerViewController: UIViewController {
         let seconds = Int(time) % 60
 
         return ("\(String(format:"%02i", hours)) : \(String(format:"%02i", minutes)) : \(String(format:"%02i", seconds))")
+    }
+
+    func setupUI() {
+        let backgroundImage = UIImage(named: "backgroundTimer")
+//        let backgoundImageView = UIImageView(image: backgroundImage)
+//        backgoundImageView.image = backgroundImage
+//        backgoundImageView.contentMode = .scaleToFill
+        self.view.backgroundColor = UIColor(patternImage: backgroundImage!)
     }
 
 }

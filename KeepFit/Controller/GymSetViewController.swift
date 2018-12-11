@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 protocol PassGymSetDelegate {
     func passData(gymSet: GymSet)
 }
@@ -32,7 +33,9 @@ class GymSetViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         timePicker.dataSource = self
         //exerciseNameLabel.text = exerciseName
 
-
+        if self.exerciseName != "Running" {
+            self.timePicker.isHidden = true
+        }
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -68,9 +71,11 @@ class GymSetViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
         set.reps = reps
         set.kilos = kilos
-        guard let selectedTime = time else {return}
-        set.time = selectedTime
 
+        if self.exerciseName == "Running" {
+            guard let selectedTime = time else {return}
+            set.time = selectedTime
+        }
         print(set.reps, set.kilos, set.time)
 
 

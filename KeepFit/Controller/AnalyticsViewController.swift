@@ -16,6 +16,7 @@ class AnalyticsViewController: UIViewController, ChartDelegate {
     @IBOutlet weak var chart: Chart!
     var exerciseName: String!
     var results: [(String, Double)]!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class AnalyticsViewController: UIViewController, ChartDelegate {
         configureChart()
 
         print(exerciseName)
+        print(results)
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -51,7 +53,7 @@ class AnalyticsViewController: UIViewController, ChartDelegate {
             (x: 9, y: results[8].1),
             (x: 10, y: results[9].1),
             (x: 11, y: results[10].1),
-            (x: 12, y: results[1].1)
+            (x: 12, y: results[11].1)
         ]
 
         let months = ["J", "F", "M", "A", "Ma", "J", "Jl", "A", "S", "O", "N", "D"]

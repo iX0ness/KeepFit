@@ -42,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func loadDatabase() {
+        
         let thruster = Exercise(name: "Thruster", imagePath: UIImage(named: "thruster")?.saveInLocalStorage(imageName: "Thruster") ?? "")
         let snatch = Exercise(name: "Snatch", imagePath: UIImage(named: "snatch")?.saveInLocalStorage(imageName: "Snatch") ?? "")
         let ringdip = Exercise(name: "Ringdip", imagePath: UIImage(named: "ringdip")?.saveInLocalStorage(imageName: "Ringdip") ?? "")
@@ -57,8 +58,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let pullUp = Exercise(name: "Pull Up", imagePath: UIImage(named: "pullup")?.saveInLocalStorage(imageName: "PullUp") ?? "")
         let muscleUP = Exercise(name: "Muscle Up", imagePath: UIImage(named: "muscleup")?.saveInLocalStorage(imageName: "MuscleUp") ?? "")
         let benchPress = Exercise(name: "Bench Press", imagePath: UIImage(named: "benchpress")?.saveInLocalStorage(imageName: "BenchPress") ?? "")
-        
-        
 
         DBManager.sharedInstance.populateDB(thruster)
         DBManager.sharedInstance.populateDB(snatch)
@@ -76,13 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DBManager.sharedInstance.populateDB(muscleUP)
         DBManager.sharedInstance.populateDB(benchPress)
 
-
-
-        
-        
-
     }
-
 
 }
 

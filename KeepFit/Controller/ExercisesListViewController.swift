@@ -17,6 +17,8 @@ class ExercisesListViewController: UIViewController, UITableViewDelegate, UITabl
     }
 
     @IBOutlet weak var exercisesTableView: UITableView!
+
+
     var exercises: Results<Exercise>!
     var exerciseName: String!
     var trainingId: Int!
@@ -28,15 +30,10 @@ class ExercisesListViewController: UIViewController, UITableViewDelegate, UITabl
         self.exercises = DBManager.sharedInstance.getExercisesFromDB()
         print(trainingId)
 
-        // Do any additional setup after loading the view.
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return exercises.count
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 130
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,10 +48,13 @@ class ExercisesListViewController: UIViewController, UITableViewDelegate, UITabl
         exerciseName = exercises[indexPath.row].name
         let exercise = TrainingExercise()
         exercise.name = exerciseName
-        
-        DBManager.sharedInstance.addExerciseForTraining(trainingId: trainingId, exercise: exercise)
-        
 
+        DBManager.sharedInstance.addExerciseForTraining(trainingId: trainingId, exercise: exercise)
+
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
     }
 
 }

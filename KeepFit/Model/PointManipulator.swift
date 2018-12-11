@@ -21,7 +21,6 @@ class PointManipulator {
         point3 = p3
     }
 
-    
     func createVectors(p1: CGPoint, p2: CGPoint, p3: CGPoint) -> [CGVector] {
         let vector1 = CGVector(dx: p2.x - p1.x, dy: p2.y - p1.y)
         let vector2 = CGVector(dx: p2.x - p3.x, dy: p2.y - p3.y)
@@ -29,3 +28,4 @@ class PointManipulator {
         return [vector1, vector2]
     }
 }
+

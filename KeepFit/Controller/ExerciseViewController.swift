@@ -21,9 +21,6 @@ class ExerciseViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var exerciseTableView: UITableView!
 
-
-
-
     var exercises: Results<Exercise>!
     var selectedExercise: Exercise?
 
@@ -33,9 +30,6 @@ class ExerciseViewController: UIViewController, UITableViewDelegate, UITableView
         self.exercises = DBManager.sharedInstance.getExercisesFromDB()
         self.exerciseTableView.delegate = self
         self.exerciseTableView.dataSource = self
-        setupUI()
-
-
     }
 
     // MARK: -  Delegate and DataSource methods
